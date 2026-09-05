@@ -105,8 +105,8 @@ result = ser.read(1)[0]
 - [x] UART TX/RX core
 - [x] Command protocol + control FSM
 - [x] Virtual serial port bridge (Verilator + pty) for host-side testing
-- [x] posit ALU: add/sub (correct)
-- [ ] posit ALU: mul/div (placeholder only)
+- [x] posit ALU: add/sub
+- [x] posit ALU: mul/div
 - [ ] posit encode/decode (posit↔float, placeholder only)
 - [ ] Verification / testbench coverage
 
