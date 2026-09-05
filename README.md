@@ -107,8 +107,8 @@ result = ser.read(1)[0]
 - [x] Virtual serial port bridge (Verilator + pty) for host-side testing
 - [x] posit ALU: add/sub
 - [x] posit ALU: mul/div
-- [ ] posit encode/decode (posit↔float, placeholder only)
-- [ ] Verification / testbench coverage
+- [x] posit encode/decode (posit↔float, placeholder only)
+- [x] Verification / testbench coverage
 
 ## License
 
