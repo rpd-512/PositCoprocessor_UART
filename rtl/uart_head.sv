@@ -1,292 +1,112 @@
-module uart_head#(
+module posit_coprocessor #(
     parameter int DATA_BITS   = 8,
-
-    parameter int BAUD_RATE = 115200,
-    parameter int CLK_FREQ = 50000000,
+    parameter int N_VAL       = 2,
+    parameter int BAUD_RATE   = 115200,
+    parameter int CLK_FREQ    = 50000000,
     parameter int OVER_SAMPLE = 16
 )(
     input  logic clk,
     input  logic rst,
-    input  logic tx_start,
     input  logic rx,
-    input  logic [DATA_BITS-1:0] tx_data,
-    output logic [DATA_BITS-1:0] rx_data,
-    output logic tx,
-    output logic rx_valid,
-    output logic tx_busy,
-    output logic tx_done,
-    output logic rx_busy
+    output logic tx
 );
-    logic tick;
-    baud_gen #(
+    // ---- UART front-end ----
+    logic [DATA_BITS-1:0] uart_rx_data;
+    logic                 uart_rx_valid;
+    logic [DATA_BITS-1:0] uart_tx_data;
+    logic                 uart_tx_start;
+    logic                 uart_tx_busy;
+    logic                 uart_tx_done;
+
+    uart_head #(
+        .DATA_BITS(DATA_BITS),
         .BAUD_RATE(BAUD_RATE),
         .CLK_FREQ(CLK_FREQ),
         .OVER_SAMPLE(OVER_SAMPLE)
-    ) baud_gen_inst (
+    ) uart_inst (
         .clk(clk),
         .rst(rst),
-        .tick(tick)
-    );
-
-    uart_tx #(
-        .DATA_BITS(DATA_BITS),
-        .OVER_SAMPLE(OVER_SAMPLE)
-    ) uart_tx_inst (
-        .clk(clk),
-        .rst(rst),
-        .tick(tick),
-        .data_tx(tx_data),
-        .tx_start(tx_start),
-        .tx(tx),
-        .tx_busy(tx_busy),
-        .tx_done(tx_done)
-    );
-
-    uart_rx #(
-        .DATA_BITS(DATA_BITS),
-        .OVER_SAMPLE(OVER_SAMPLE)
-    ) uart_rx_inst (
-        .clk(clk),
-        .rst(rst),
-        .tick(tick),
+        .tx_start(uart_tx_start),
         .rx(rx),
-        .data_rx(rx_data),
-        .rx_valid(rx_valid),
-        .rx_busy(rx_busy)
+        .tx_data(uart_tx_data),
+        .rx_data(uart_rx_data),
+        .tx(tx),
+        .rx_valid(uart_rx_valid),
+        .tx_busy(uart_tx_busy),
+        .tx_done(uart_tx_done),
+        .rx_busy()          // unused
     );
-endmodule
 
-module uart_tx#(
-    parameter int DATA_BITS   = 8,
-    parameter int OVER_SAMPLE = 16
-)(
-    input  logic clk,
-    input  logic rst,
-    input  logic tick,
-    input  logic [DATA_BITS-1:0] data_tx,
-    input  logic tx_start,
-    output logic tx,
-    output logic tx_busy,
-    output logic tx_done
-);
-    typedef enum logic [1:0] {
-        IDLE, START, DATA, STOP
-    } state_t;
+    // ---- Posit ALU ----
+    logic [2:0]            opcode_r;
+    logic [DATA_BITS-1:0]  in1_r, in2_r;
+    logic [DATA_BITS-1:0]  alu_out;
 
-    state_t state; 
-    localparam int TICK_COUNT_W = $clog2(OVER_SAMPLE);
-    logic [TICK_COUNT_W-1:0] tick_count;
+    posit_arithmetic #(
+        .DATA_BITS(DATA_BITS),
+        .N_VAL(N_VAL)
+    ) alu_inst (
+        .opcode(opcode_r),
+        .in1(in1_r),
+        .in2(in2_r),
+        .out(alu_out)
+    );
 
-    localparam int BIT_COUNT_W = $clog2(DATA_BITS);
-    logic [BIT_COUNT_W-1:0] bit_count;
-    
-    logic [DATA_BITS-1:0] shift_reg;
-
-    //Finite State Machine
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst) begin
-            state <= IDLE;
-        end
-        else begin
-            case (state)
-                IDLE  : if(tx_start) state <= START;
-                START : if(tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) state <= DATA;
-                DATA  : if(tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1) && bit_count == BIT_COUNT_W'(DATA_BITS-1)) state <= STOP;
-                STOP  : if(tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) state <= IDLE;
-                default : state <= IDLE;
-            endcase
-        end
-    end
-
-    //Shift Register for Data Transmission
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst) begin
-            shift_reg <= '0;
-        end
-        else if(state == IDLE && tx_start) begin
-            shift_reg <= data_tx; // Load data into shift register at start
-        end
-    end
-
-    //Tick Count Manager
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst || state == IDLE) tick_count <= '0;
-        else if (tick) begin
-            if (tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) tick_count <= '0;
-            else tick_count <= tick_count + 1'b1;
-        end
-    end
-
-    //Bit Count Manager
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst) bit_count <= '0;
-        else if(state == DATA && tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) begin
-            bit_count <= bit_count + 1'b1;
-        end
-        else if(state != DATA) begin
-            bit_count <= '0;
-        end
-    end
-
-    // Data Transmission
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
-            tx      <= 1'b1;
-            tx_done <= 1'b0;
-        end
-        else begin
-            case (state)
-                IDLE  : tx <= 1'b1; // Idle state, line is high
-                START : tx <= 1'b0; // Start bit, line goes low
-                DATA  : tx <= shift_reg[bit_count]; // Send data bits
-                STOP  : tx <= 1'b1; // Stop bit, line goes high
-                default : tx <= 1'b1; // Default to idle state
-            endcase
-
-            if (state == STOP && tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) begin
-                tx_done <= 1'b1; // Transmission done
-            end
-            else tx_done <= 1'b0;
-        end
-    end
-    assign tx_busy = (state!=IDLE);
-
-endmodule
-
-module uart_rx#(
-    parameter int DATA_BITS   = 8,
-    parameter int OVER_SAMPLE = 16
-)(
-    input  logic clk,
-    input  logic rst,
-    input  logic tick,
-    input  logic rx,
-    output logic [DATA_BITS-1:0] data_rx,
-    output logic rx_valid,
-    output logic rx_busy
-);
-    typedef enum logic [1:0] {
-        IDLE, START, DATA, STOP
+    // ---- Control FSM ----
+    // Host protocol: send 3 bytes { opcode[2:0] (in low bits), in1, in2 }.
+    // Coprocessor replies with 1 byte: the result.
+    typedef enum logic [2:0] {
+        S_OPCODE, S_IN1, S_IN2, S_COMPUTE, S_SEND, S_WAIT_DONE
     } state_t;
 
     state_t state;
-    localparam int TICK_COUNT_W = $clog2(OVER_SAMPLE);
-    logic [TICK_COUNT_W-1:0] tick_count;
 
-    localparam int BIT_COUNT_W = $clog2(DATA_BITS);
-    logic [BIT_COUNT_W-1:0] bit_count;
-
-    logic [DATA_BITS-1:0] shift_reg;
-
-    logic rx_ff1, rx_sync;
-
-    //Handle metastability and synchronize the rx signal to the clk domain
     always_ff @(posedge clk or posedge rst) begin
         if (rst) begin
-            rx_ff1  <= 1'b1;
-            rx_sync <= 1'b1;
+            state         <= S_OPCODE;
+            opcode_r      <= '0;
+            in1_r         <= '0;
+            in2_r         <= '0;
+            uart_tx_data  <= '0;
+            uart_tx_start <= 1'b0;
         end
         else begin
-            rx_ff1  <= rx;
-            rx_sync <= rx_ff1;
-        end
-    end
+            uart_tx_start <= 1'b0; // default: 1-cycle pulse only
 
-    //Finite State Machine
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst) begin
-            state <= IDLE;
-        end
-        else begin
             case (state)
-                IDLE  : if(!rx_sync) state <= START; // Detect start bit (line goes low)
-                START : begin
-                        if (tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE/2) && rx_sync)
-                            state <= IDLE;  // false start, was noise
-                        else if (tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1))
-                            state <= DATA;  // confirmed, proceed
-                    end
-                DATA  : if(tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1) && bit_count == BIT_COUNT_W'(DATA_BITS-1)) state <= STOP;
-                STOP  : if(tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) state <= IDLE;
-                default : state <= IDLE;
+                S_OPCODE: if (uart_rx_valid) begin
+                    opcode_r <= uart_rx_data[2:0];
+                    state    <= S_IN1;
+                end
+
+                S_IN1: if (uart_rx_valid) begin
+                    in1_r <= uart_rx_data;
+                    state <= S_IN2;
+                end
+
+                S_IN2: if (uart_rx_valid) begin
+                    in2_r <= uart_rx_data;
+                    state <= S_COMPUTE;
+                end
+
+                // one cycle for the combinational ALU output to settle
+                S_COMPUTE: begin
+                    uart_tx_data <= alu_out;
+                    state        <= S_SEND;
+                end
+
+                S_SEND: if (!uart_tx_busy) begin
+                    uart_tx_start <= 1'b1;
+                    state         <= S_WAIT_DONE;
+                end
+
+                S_WAIT_DONE: if (uart_tx_done) begin
+                    state <= S_OPCODE;
+                end
+
+                default: state <= S_OPCODE;
             endcase
         end
     end
 
-    //Shift Register for Data Reveiving
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
-            data_rx  <= '0;
-            rx_valid <= 1'b0;
-        end
-        else if (state == STOP && tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE/2) && rx_sync) begin
-            data_rx  <= shift_reg;
-            rx_valid <= 1'b1;
-        end
-        else begin
-            rx_valid <= 1'b0;
-        end
-    end
-
-    //Tick Count Manager
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst || state == IDLE) tick_count <= '0;
-        else if (tick) begin
-            if (tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) tick_count <= '0;
-            else tick_count <= tick_count + 1'b1;
-        end
-    end
-
-    //Bit Count Manager
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst) bit_count <= '0;
-        else if(state == DATA && tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) begin
-            bit_count <= bit_count + 1'b1;
-        end
-        else if(state != DATA) begin
-            bit_count <= '0;
-        end
-    end
-
-    //Data Reception
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
-            shift_reg <= '0;
-        end
-        else if(state == DATA && tick && tick_count == TICK_COUNT_W'(OVER_SAMPLE/2)) begin
-            shift_reg[bit_count] <= rx_sync; // Sample data bits
-        end
-    end
-    assign rx_busy = (state != IDLE);
-
-endmodule
-
-
-module baud_gen#(
-    parameter BAUD_RATE = 115200,
-    parameter CLK_FREQ = 50000000,
-    parameter OVER_SAMPLE = 16
-)(
-    input logic clk,
-    input logic rst,
-    output logic tick
-);
-    localparam integer BAUD_TICK_COUNT = CLK_FREQ / (BAUD_RATE * OVER_SAMPLE);
-    localparam integer BAUD_LOG = $clog2(BAUD_TICK_COUNT);
-    logic [BAUD_LOG-1:0] count;
-
-    always_ff @(posedge clk or posedge rst) begin
-        if(rst) begin
-            count <= '0;
-            tick <= 1'b0;
-        end
-        else if(count == BAUD_LOG'(BAUD_TICK_COUNT-1)) begin
-            count <= '0;
-            tick <= 1'b1;
-        end
-        else begin
-            count <= count + 1'b1;
-            tick <= 1'b0;
-        end
-    end
 endmodule
