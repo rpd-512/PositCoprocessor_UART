@@ -91,9 +91,10 @@ module posit_muldiv #(
 );
     logic [DATA_BITS-1:0] n1, n2;
     assign n1 = in1;
-    assign n2 = op ? 1/in2 + 1'b1 : in2; // 2's complement for subtraction
+    assign n2 = in2; // 2's complement for subtraction
 
-    assign out = n1 * n2; //testing
+    assign out = op ? n1/n2 : n1*n2; // test
+    //assign out = n1 * n2; //testing
 endmodule
 
 module posit_to_float #(
