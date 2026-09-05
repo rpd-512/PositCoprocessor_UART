@@ -5,13 +5,24 @@
 // a Python script using pyserial -- can talk to the simulated design
 // as if it were a real UART device.
 //
+// This bridge is a plain, protocol-agnostic 8-bit UART byte pipe: it
+// knows nothing about opcodes, posits, or multi-byte words. Each byte
+// written to the pty becomes one standard 8-bit UART frame on dut->rx,
+// and each 8-bit UART frame received on dut->tx becomes one byte
+// written back to the pty. All of the posit-specific framing (opcode,
+// 16-bit in1/in2 split into hi/lo bytes, result split into hi/lo
+// bytes, status byte) is handled entirely inside coprocessor.sv's FSM
+// -- see that file's comments for the on-wire protocol, and
+// posit_serial.py's send_op for the host-side packing, which must
+// match it.
+//
 // Build (needs uart.sv = uart_head/uart_tx/uart_rx/baud_gen, and
-// posit_arithmetic.sv, alongside posit_coprocessor.sv):
+// posit_arithmetic.sv, alongside coprocessor.sv):
 //
 //   verilator -Wall --cc --exe --build -j 0 \
-//       --top-module posit_coprocessor \
+//       --top-module coprocessor \
 //       -CFLAGS "-std=c++17" -LDFLAGS "-lutil" \
-//       posit_coprocessor.sv uart.sv posit_arithmetic.sv \
+//       coprocessor.sv uart.sv posit_arithmetic.sv \
 //       vserial_bridge.cpp -o vserial_bridge
 //
 //   ./obj_dir/vserial_bridge
@@ -34,6 +45,11 @@ static constexpr uint32_t BAUD_RATE      = 115200;
 static constexpr uint32_t CYCLES_PER_BIT = CLK_FREQ / BAUD_RATE;
 static constexpr uint32_t RESET_CYCLES   = 16;
 
+// Physical UART frame width. This MUST be 8 -- standard UART -- and
+// MUST match coprocessor.sv's UART_BITS parameter. It has nothing to
+// do with the 16-bit posit width; that split happens inside the FSM.
+static constexpr uint32_t DATA_BITS      = 8;
+
 int main(int argc, char** argv) {
     Verilated::commandArgs(argc, argv);
     auto* dut = new Vcoprocessor;
@@ -46,30 +62,34 @@ int main(int argc, char** argv) {
         return 1;
     }
     fcntl(master_fd, F_SETFL, O_NONBLOCK);
-    printf("virtual serial port: %s\n", slave_name);
+    printf("virtual serial port: %s  (standard %u-bit UART frames)\n",
+           slave_name, DATA_BITS);
     fflush(stdout);
 
     // --- device state ---
     dut->rst = 1;
     dut->rx  = 1; // idle high
 
-    // Host -> device: drive dut->rx from bytes read off the pty
+    // Host -> device: drive dut->rx one raw pty byte at a time.
     enum RxState { RX_IDLE, RX_START, RX_DATA, RX_STOP };
     RxState rx_state = RX_IDLE;
-    uint32_t rx_cycle = 0;
-    int rx_bitidx = 0;
-    uint8_t rx_byte = 0;
+    uint32_t rx_cycle  = 0;
+    uint32_t rx_bitidx = 0;
+    uint32_t rx_byte   = 0;
     std::queue<uint8_t> to_device;
 
-    // Device -> host: sample dut->tx, reassemble bytes, write to the pty
+    // Device -> host: sample dut->tx, reassemble one raw byte, write
+    // it straight out to the pty.
     enum TxState { TX_WAIT, TX_BYTE };
     TxState tx_state = TX_WAIT;
     bool tx_prev = true;
-    uint32_t tx_cycle = 0;
-    int tx_next_bit = 0;
-    uint8_t tx_byte = 0;
-    uint32_t bit_target[9];
-    for (int i = 0; i < 9; i++)
+    uint32_t tx_cycle    = 0;
+    uint32_t tx_next_bit = 0;
+    uint32_t tx_byte     = 0;
+    // bit_target[i] = sample point (in cycles since start-bit falling edge)
+    // for data bit i (i < DATA_BITS) or the stop bit (i == DATA_BITS).
+    uint32_t bit_target[DATA_BITS + 1];
+    for (uint32_t i = 0; i <= DATA_BITS; i++)
         bit_target[i] = (i + 1) * CYCLES_PER_BIT + CYCLES_PER_BIT / 2;
 
     uint64_t cycle_count = 0;
@@ -89,12 +109,13 @@ int main(int argc, char** argv) {
             if (n > 0) for (ssize_t i = 0; i < n; i++) to_device.push(buf[i]);
         }
 
-        // ---- bit-bang dut->rx from to_device ----
+        // ---- bit-bang dut->rx from to_device, one byte at a time ----
         switch (rx_state) {
             case RX_IDLE:
                 dut->rx = 1;
                 if (!to_device.empty()) {
-                    rx_byte = to_device.front(); to_device.pop();
+                    rx_byte = to_device.front();
+                    to_device.pop();
                     rx_state = RX_START; rx_cycle = 0;
                 }
                 break;
@@ -103,10 +124,10 @@ int main(int argc, char** argv) {
                 if (++rx_cycle >= CYCLES_PER_BIT) { rx_state = RX_DATA; rx_cycle = 0; rx_bitidx = 0; }
                 break;
             case RX_DATA:
-                dut->rx = (rx_byte >> rx_bitidx) & 1;
+                dut->rx = (rx_byte >> rx_bitidx) & 1;   // LSB-first, standard UART
                 if (++rx_cycle >= CYCLES_PER_BIT) {
                     rx_cycle = 0;
-                    if (++rx_bitidx == 8) rx_state = RX_STOP;
+                    if (++rx_bitidx == DATA_BITS) rx_state = RX_STOP;
                 }
                 break;
             case RX_STOP:
@@ -115,7 +136,7 @@ int main(int argc, char** argv) {
                 break;
         }
 
-        // ---- sample dut->tx, reassemble bytes, emit to the pty ----
+        // ---- sample dut->tx, reassemble a byte, emit to the pty ----
         bool tx_cur = dut->tx;
         if (tx_state == TX_WAIT) {
             if (tx_prev && !tx_cur) { // falling edge = start bit
@@ -123,16 +144,16 @@ int main(int argc, char** argv) {
             }
         } else {
             tx_cycle++;
-            if (tx_next_bit < 9 && tx_cycle >= bit_target[tx_next_bit]) {
-                if (tx_next_bit < 8) {
-                    if (tx_cur) tx_byte |= (1 << tx_next_bit);
+            if (tx_next_bit <= DATA_BITS && tx_cycle >= bit_target[tx_next_bit]) {
+                if (tx_next_bit < DATA_BITS) {
+                    if (tx_cur) tx_byte |= (1u << tx_next_bit);
                 } else if (tx_cur) { // valid stop bit -> emit the completed byte
-                    uint8_t b = tx_byte;
-                    write(master_fd, &b, 1);
+                    uint8_t byte_val = (uint8_t)(tx_byte & 0xFF);
+                    write(master_fd, &byte_val, 1);
                 }
                 tx_next_bit++;
             }
-            if (tx_next_bit == 9) tx_state = TX_WAIT;
+            if (tx_next_bit == DATA_BITS + 1) tx_state = TX_WAIT;
         }
         tx_prev = tx_cur;
     }

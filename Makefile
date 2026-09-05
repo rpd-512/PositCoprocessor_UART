@@ -1,15 +1,13 @@
 VERILATOR = verilator
 
-RTL = rtl/coprocessor.sv \
-      rtl/uart_head.sv \
-      rtl/posit_arithmetic.sv
+RTL = rtl/*
 
 CPP = serial_virtual/vserial_bridge.cpp
 
 TARGET = vserial_bridge
 
 all:
-	$(VERILATOR) -Wall \
+	$(VERILATOR) -Wall -Wno-fatal \
 		-Wno-PINCONNECTEMPTY \
 		-Wno-DECLFILENAME \
 		--cc --exe --build \

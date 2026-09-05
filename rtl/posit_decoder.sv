@@ -104,11 +104,13 @@ module left_shifter (
 endmodule
 
 // ============================================================================
-// Module: shift
+// Module: shift  -- es=2: top 2 bits of the shifted field are the exponent,
+// next 11 bits are the fraction (bottom 2 bits still dropped, same as the
+// original es=1 version dropped its bottom 2 bits).
 // ============================================================================
 module shift (
-    output logic        expo,
-    output logic [11:0] frac,
+    output logic [1:0]  expo,
+    output logic [10:0] frac,
     input  logic [14:0] xin,
     input  logic [3:0]  k
 );
@@ -121,8 +123,8 @@ module shift (
         .k(k)
     );
 
-    assign expo = sh0[14];
-    assign frac = sh0[13:2];
+    assign expo = sh0[14:13];
+    assign frac = sh0[12:2];
 
 endmodule
 
@@ -146,14 +148,14 @@ module twoscom #(
 endmodule
 
 // ============================================================================
-// Module: posit_decoder (Top-Level Decoder Module)
+// Module: posit_decoder (Top-Level Decoder Module) -- N=16, es=2
 // ============================================================================
 module posit_decoder (
     input  logic [15:0] in,
     output logic        sign,
     output logic [4:0]  regi,
-    output logic        expo,
-    output logic [11:0] frac,
+    output logic [1:0]  expo,
+    output logic [10:0] frac,
     output logic        allone,
     output logic        allzero
 );
@@ -212,22 +214,17 @@ module posit_decoder (
         .k(k)
     );
 
-    // Special cases identification
+    // Special cases identification -- zero and NaR both have a magnitude
+    // field of all zeros (twos_in collapses them to the same value), so
+    // distinguish them using the original sign bit instead.
     always_comb begin
-        case ({twos_in[14], k})
-            5'b01111: begin
-                allone  = 1'b0;
-                allzero = 1'b1;
-            end
-            5'b11111: begin
-                allone  = 1'b1;
-                allzero = 1'b0;
-            end
-            default: begin
-                allone  = 1'b0;
-                allzero = 1'b0;
-            end
-        endcase
+        if (in[14:0] == 15'b0) begin
+            allzero = ~sign;   // sign=0, magnitude=0 -> true zero
+            allone  =  sign;   // sign=1, magnitude=0 -> NaR
+        end else begin
+            allzero = 1'b0;
+            allone  = 1'b0;
+        end
     end
 
 endmodule
