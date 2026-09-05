@@ -91,4 +91,4 @@ result = ser.read(N)
 
 ## License
 
-TBD
+MIT
