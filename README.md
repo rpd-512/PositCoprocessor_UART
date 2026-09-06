@@ -44,12 +44,12 @@ Coprocessor → host, 1 byte per command:
 
 | Opcode (bin) | Operation | Notes |
 |--------------|-----------|-------|
-| 000 | ADD | in1 + in2 |
-| 001 | SUB | in1 - in2 |
-| 010 | MUL | placeholder — not correct posit math yet |
-| 011 | DIV | placeholder — not correct posit math yet |
-| 100 | PTF (posit → float) | placeholder, currently passthrough |
-| 101 | FTP (float → posit) | placeholder, currently passthrough |
+| 000 | ADD | posit addition |
+| 001 | SUB | posit subtraction |
+| 010 | MUL | posit multiplication |
+| 011 | DIV | posit division |
+| 100 | PTF (posit → float) | implemented |
+| 101 | FTP (float → posit) | implemented |
 | 110, 111 | reserved | unused |
 
 ## Repository Structure
