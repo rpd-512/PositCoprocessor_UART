@@ -9,8 +9,6 @@ A hardware coprocessor implementing posit arithmetic, exposed to a host system o
 - **UART config:** 115200 baud, 8N1, oversampled 16x (`baud_gen`)
 - **Operations:** add, sub, mul, div, posit→float, float→posit
 
-> `mul`/`div`/`ptf`/`ftp` in `posit_arithmetic.sv` are currently placeholder logic (not real posit math) — only `add`/`sub` do correct two's-complement arithmetic right now.
-
 ## Architecture
 
 ```
