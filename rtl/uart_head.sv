@@ -110,7 +110,8 @@ module uart_tx#(
 
     //Tick Count Manager
     always_ff @(posedge clk or posedge rst) begin
-        if(rst || state == IDLE) tick_count <= '0;
+        if(rst) tick_count <= '0;
+	else if (state == IDLE) tick_count <= '0;
         else if (tick) begin
             if (tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) tick_count <= '0;
             else tick_count <= tick_count + 1'b1;
@@ -230,7 +231,8 @@ module uart_rx#(
 
     //Tick Count Manager
     always_ff @(posedge clk or posedge rst) begin
-        if(rst || state == IDLE) tick_count <= '0;
+        if(rst) tick_count <= '0;
+	else if (state == IDLE) tick_count <= '0;
         else if (tick) begin
             if (tick_count == TICK_COUNT_W'(OVER_SAMPLE-1)) tick_count <= '0;
             else tick_count <= tick_count + 1'b1;
