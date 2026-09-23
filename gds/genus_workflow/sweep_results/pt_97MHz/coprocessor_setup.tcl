@@ -1,6 +1,6 @@
 ######################################################################
 
-# Created by Genus(TM) Synthesis Solution 21.14-s082_1 on Wed Sep 23 18:59:59 IST 2026
+# Created by Genus(TM) Synthesis Solution 21.14-s082_1 on Wed Sep 23 21:16:24 IST 2026
 
 # This file contains the Genus script for design:coprocessor
 
@@ -14,11 +14,11 @@ set_db -quiet phys_use_invs_extraction true
 set_db -quiet phys_route_time_out 120.0
 set_db -quiet capacitance_per_unit_length_mmmc {}
 set_db -quiet resistance_per_unit_length_mmmc {}
-set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 9 0.0 7.0} {to_generic 76 86 76 83} {first_condense 24 114 30 118} {PBS_Generic_Opt-Post 107 116 107.175204 114.175204} {{PBS_Generic-Postgen HBO Optimizations} 0 116 0.0 114.175204} {PBS_TechMap-Start 0 116 0.0 114.175204} {{PBS_TechMap-Premap HBO Optimizations} 0 116 0.0 114.175204} {second_condense 37 153 42 163} {reify 14 167 32 195} {global_incr_map 8 175 8 204} {{PBS_Techmap-Global Mapping} 60 176 60.477098000000026 174.65230200000002} {{PBS_TechMap-Datapath Postmap Operations} 1 177 -0.02178699999998912 174.63051500000003} {{PBS_TechMap-Postmap HBO Optimizations} 0 177 -0.021355999999997266 174.60915900000003} {{PBS_TechMap-Postmap Clock Gating} 1 178 1.0 175.60915900000003} {{PBS_TechMap-Postmap Cleanup} 4 182 4.964743999999996 180.57390300000003} {PBS_Techmap-Post_MBCI 0 182 0.0 180.57390300000003} {incr_opt 487 670 489 701} }
+set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 10 0.0 7.0} {to_generic 42 52 41 48} {first_condense 10 64 12 64} {PBS_Generic_Opt-Post 55 65 55.747154 62.747154} {{PBS_Generic-Postgen HBO Optimizations} 1 66 0.0 62.747154} {PBS_TechMap-Start 0 66 0.0 62.747154} {{PBS_TechMap-Premap HBO Optimizations} 0 66 0.0 62.747154} {second_condense 8 74 10 77} {reify 11 85 21 99} {global_incr_map 1 86 1 100} {{PBS_Techmap-Global Mapping} 26 92 26.17131099999998 88.91846499999998} {{PBS_TechMap-Datapath Postmap Operations} 0 92 0.9838859999999983 89.90235099999998} {{PBS_TechMap-Postmap HBO Optimizations} 0 92 -0.01380100000000084 89.88854999999998} {{PBS_TechMap-Postmap Clock Gating} 1 93 1.0 90.88854999999998} {{PBS_TechMap-Postmap Cleanup} 1 94 -0.016073000000005777 90.87247699999998} {PBS_Techmap-Post_MBCI 0 94 0.0 90.87247699999998} {incr_opt 3 97 3 111} {PBS_Generic-Start 0 99 0.0 95.82288799999998} {to_generic 0 99 0 113} {first_condense 84 210 91 232} {PBS_Generic_Opt-Post 127 226 127.67547400000001 223.498362} {{PBS_Generic-Postgen HBO Optimizations} 0 226 0.0 223.498362} {PBS_TechMap-Start 0 226 0.0 223.498362} {{PBS_TechMap-Premap HBO Optimizations} 0 226 0.0 223.498362} {second_condense 88 314 93 341} {reify 23 337 44 385} {global_incr_map 11 349 11 397} {{PBS_Techmap-Global Mapping} 123 349 123.19123199999996 346.68959399999994} {{PBS_TechMap-Datapath Postmap Operations} 0 349 0.0 346.68959399999994} {{PBS_TechMap-Postmap HBO Optimizations} 0 349 -0.024454999999989013 346.66513899999995} {{PBS_TechMap-Postmap Clock Gating} 1 350 1.0 347.66513899999995} {{PBS_TechMap-Postmap Cleanup} 7 357 6.959103000000027 354.624242} {PBS_Techmap-Post_MBCI 0 357 0.0 354.624242} {incr_opt 449 806 449 856} {PBS_Generic-Start 0 807 0.0 806.1019910000002} {to_generic 0 808 0 858} {first_condense 70 897 75 953} {PBS_Generic_Opt-Post 104 911 104.71324299999992 910.8152340000001} {{PBS_Generic-Postgen HBO Optimizations} 0 911 0.0 910.8152340000001} {PBS_TechMap-Start 0 911 0.0 910.8152340000001} {{PBS_TechMap-Premap HBO Optimizations} 0 911 0.0 910.8152340000001} {second_condense 62 974 66 1034} {reify 20 994 37 1072} {global_incr_map 12 1006 12 1085} {{PBS_Techmap-Global Mapping} 95 1006 94.29488200000003 1005.1101160000002} {{PBS_TechMap-Datapath Postmap Operations} 0 1006 0.0 1005.1101160000002} {{PBS_TechMap-Postmap HBO Optimizations} 0 1006 -0.022254999999972824 1005.0878610000002} {{PBS_TechMap-Postmap Clock Gating} 0 1006 1.0 1006.0878610000002} {{PBS_TechMap-Postmap Cleanup} 4 1010 3.9725290000000086 1010.0603900000002} {PBS_Techmap-Post_MBCI 0 1010 0.0 1010.0603900000002} {incr_opt 416 1426 417 1507} {PBS_Generic-Start 0 1428 0.0 1428.5081650000002} {to_generic 0 1428 0 1509} {first_condense 64 1509 68 1596} {PBS_Generic_Opt-Post 99 1527 99.76695199999995 1528.2751170000001} {{PBS_Generic-Postgen HBO Optimizations} 0 1527 0.0 1528.2751170000001} {PBS_TechMap-Start 0 1527 0.0 1529.2751170000001} {{PBS_TechMap-Premap HBO Optimizations} 0 1527 0.0 1529.2751170000001} {second_condense 71 1598 75 1689} {reify 16 1614 34 1724} {global_incr_map 12 1626 11 1736} {{PBS_Techmap-Global Mapping} 99 1626 98.7681540000001 1628.0432710000002} {{PBS_TechMap-Datapath Postmap Operations} 0 1626 0.0 1628.0432710000002} {{PBS_TechMap-Postmap HBO Optimizations} 0 1626 -0.024730000000090513 1628.0185410000001} {{PBS_TechMap-Postmap Clock Gating} 1 1627 0.0 1628.0185410000001} {{PBS_TechMap-Postmap Cleanup} 5 1632 5.966724000000113 1633.9852650000003} {PBS_Techmap-Post_MBCI 0 1632 0.0 1633.9852650000003} {incr_opt 433 2065 436 2179} {PBS_Generic-Start 0 2066 0.0 2071.3136320000003} {to_generic 1 2067 0 2181} {first_condense 69 2151 74 2272} {PBS_Generic_Opt-Post 104 2170 104.48138299999982 2175.795015} {{PBS_Generic-Postgen HBO Optimizations} 0 2170 0.0 2175.795015} {PBS_TechMap-Start 0 2170 0.0 2176.795015} {{PBS_TechMap-Premap HBO Optimizations} 0 2170 0.0 2176.795015} {second_condense 76 2246 81 2373} {reify 22 2268 41 2415} {global_incr_map 11 2279 11 2426} {{PBS_Techmap-Global Mapping} 110 2280 109.18863299999975 2285.983648} {{PBS_TechMap-Datapath Postmap Operations} 0 2280 0.0 2285.983648} {{PBS_TechMap-Postmap HBO Optimizations} 0 2280 -0.02487299999984316 2285.958775} {{PBS_TechMap-Postmap Clock Gating} 0 2280 1.0 2286.958775} {{PBS_TechMap-Postmap Cleanup} 11 2291 10.952737999999954 2297.911513} {PBS_Techmap-Post_MBCI 0 2291 0.0 2297.911513} {incr_opt 410 2701 412 2851} {PBS_Generic-Start 0 2703 0.0 2712.3566619999997} {to_generic 0 2703 0 2854} {first_condense 78 2798 84 2956} {PBS_Generic_Opt-Post 110 2813 110.64426600000024 2823.000928} {{PBS_Generic-Postgen HBO Optimizations} 0 2813 0.0 2824.000928} {PBS_TechMap-Start 0 2813 0.0 2824.000928} {{PBS_TechMap-Premap HBO Optimizations} 0 2813 0.0 2824.000928} {second_condense 49 2862 54 3026} {reify 23 2885 44 3071} {global_incr_map 11 2896 11 3082} {{PBS_Techmap-Global Mapping} 83 2896 83.01733100000001 2907.018259} {{PBS_TechMap-Datapath Postmap Operations} 0 2896 0.0 2907.018259} {{PBS_TechMap-Postmap HBO Optimizations} 0 2896 -0.02518400000008114 2906.993075} {{PBS_TechMap-Postmap Clock Gating} 1 2897 1.0 2907.993075} {{PBS_TechMap-Postmap Cleanup} 9 2906 8.962494000000333 2916.955569} {PBS_Techmap-Post_MBCI 0 2906 0.0 2916.955569} {incr_opt 343 3249 344 3437} {PBS_Generic-Start 0 3251 0.0 3262.4892969999996} {to_generic 0 3251 0 3439} {first_condense 73 3338 78 3533} {PBS_Generic_Opt-Post 102 3353 104.40487299999995 3366.8941699999996} {{PBS_Generic-Postgen HBO Optimizations} 0 3354 0.0 3366.8941699999996} {PBS_TechMap-Start 0 3354 0.0 3366.8941699999996} {{PBS_TechMap-Premap HBO Optimizations} 0 3354 0.0 3366.8941699999996} {second_condense 39 3393 43 3593} {reify 39 3432 59 3652} {global_incr_map 11 3443 11 3663} {{PBS_Techmap-Global Mapping} 89 3443 89.90345500000012 3456.7976249999997} {{PBS_TechMap-Datapath Postmap Operations} 0 3443 0.0 3456.7976249999997} {{PBS_TechMap-Postmap HBO Optimizations} 0 3443 -0.024517000000287226 3456.7731079999994} {{PBS_TechMap-Postmap Clock Gating} 1 3444 1.0 3457.7731079999994} {{PBS_TechMap-Postmap Cleanup} 7 3451 6.968304999999873 3464.7414129999993} {PBS_Techmap-Post_MBCI 0 3451 0.0 3464.7414129999993} {incr_opt 413 3864 416 4089} {PBS_Generic-Start 0 3865 0.0 3883.105564999999} {to_generic 0 3865 0 4091} {first_condense 66 3949 70 4180} {PBS_Generic_Opt-Post 101 3966 101.91943100000026 3985.024995999999} {{PBS_Generic-Postgen HBO Optimizations} 0 3966 0.0 3985.024995999999} {PBS_TechMap-Start 0 3966 0.0 3985.024995999999} {{PBS_TechMap-Premap HBO Optimizations} 0 3966 0.0 3985.024995999999} {second_condense 48 4014 52 4250} {reify 20 4034 38 4289} {global_incr_map 12 4046 11 4301} {{PBS_Techmap-Global Mapping} 80 4046 79.45473399999992 4064.479729999999} {{PBS_TechMap-Datapath Postmap Operations} 0 4046 0.0 4064.479729999999} {{PBS_TechMap-Postmap HBO Optimizations} 0 4046 -0.024355999999897904 4064.455373999999} {{PBS_TechMap-Postmap Clock Gating} 0 4046 1.0 4065.455373999999} {{PBS_TechMap-Postmap Cleanup} 8 4055 7.960051999999905 4073.415425999999} {PBS_Techmap-Post_MBCI 0 4055 0.0 4073.415425999999} {incr_opt 240 4295 242 4553} {PBS_Generic-Start 0 4296 0.0 4317.948484999998} {to_generic 1 4297 0 4555} {first_condense 62 4374 67 4640} {PBS_Generic_Opt-Post 95 4391 96.54107000000022 4414.489554999998} {{PBS_Generic-Postgen HBO Optimizations} 0 4391 0.0 4414.489554999998} {PBS_TechMap-Start 0 4392 0.0 4414.489554999998} {{PBS_TechMap-Premap HBO Optimizations} 0 4392 0.0 4414.489554999998} {second_condense 69 4461 73 4731} {reify 17 4478 35 4766} {global_incr_map 11 4489 11 4778} {{PBS_Techmap-Global Mapping} 98 4490 98.62720799999988 4513.116762999998} {{PBS_TechMap-Datapath Postmap Operations} 0 4490 0.0 4513.116762999998} {{PBS_TechMap-Postmap HBO Optimizations} 0 4490 -0.02369799999996758 4513.093064999998} {{PBS_TechMap-Postmap Clock Gating} 0 4490 1.0 4514.093064999998} {{PBS_TechMap-Postmap Cleanup} 7 4497 6.955837000000429 4521.048901999999} {PBS_Techmap-Post_MBCI 0 4497 0.0 4521.048901999999} {incr_opt 258 4755 260 5047} {PBS_Generic-Start 0 4757 0.0 4782.457601000003} {to_generic 0 4757 0 5049} {first_condense 90 4861 99 5164} {PBS_Generic_Opt-Post 123 4880 124.17918099999952 4906.636782000002} {{PBS_Generic-Postgen HBO Optimizations} 0 4880 0.0 4906.636782000002} {PBS_TechMap-Start 0 4880 0.0 4906.636782000002} {{PBS_TechMap-Premap HBO Optimizations} 0 4880 0.0 4906.636782000002} {second_condense 45 4925 50 5233} {reify 21 4946 36 5269} {global_incr_map 4 4950 4 5274} {{PBS_Techmap-Global Mapping} 71 4951 71.15347800000018 4977.7902600000025} {{PBS_TechMap-Datapath Postmap Operations} 0 4951 0.0 4977.7902600000025} {{PBS_TechMap-Postmap HBO Optimizations} 0 4951 -0.01837599999998929 4977.7718840000025} {{PBS_TechMap-Postmap Clock Gating} 1 4952 1.0 4978.7718840000025} {{PBS_TechMap-Postmap Cleanup} 0 4952 -0.017813999999816588 4978.754070000003} {PBS_Techmap-Post_MBCI 0 4952 0.0 4978.754070000003} {incr_opt 9 4961 9 5285} }
 set_db -quiet timing_adjust_tns_of_complex_flops false
-set_db -quiet tinfo_tstamp_file .rs_harshit.tstamp
+set_db -quiet tinfo_tstamp_file .rs_root.tstamp
 set_db -quiet metric_enable true
-set_db -quiet flow_metrics_snapshot_uuid e23c3a18-f63b-41a8-acb0-1fd6b559f9cd
+set_db -quiet flow_metrics_snapshot_uuid 155acee4-8b00-4c78-8df5-fc642aae7318
 set_db -quiet phys_use_segment_parasitics true
 set_db -quiet probabilistic_extraction true
 set_db -quiet ple_correlation_factors {1.9000 2.0000}
@@ -101,22 +101,22 @@ set_db -quiet operating_condition:default_emulate_libset_max/sky130_fd_sc_hd__tt
 set_db -quiet operating_condition:default_emulate_libset_max/sky130_fd_sc_hd__tt_025C_1v80/_nominal_ .tree_type balanced_tree
 # BEGIN MSV SECTION
 # END MSV SECTION
-define_clock -name clk -domain domain_1 -period 729927.0 -divide_period 100 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:coprocessor port:coprocessor/clk
+define_clock -name clk -domain domain_1 -period 257732.0 -divide_period 25 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -remove -design design:coprocessor port:coprocessor/clk
 define_cost_group -design design:coprocessor -name clk
 external_delay -accumulate -input {0.0 no_value 0.0 no_value} -clock clock:coprocessor/clk -name create_clock_delay_domain_1_clk_R_0 port:coprocessor/clk
 set_db -quiet external_delay:coprocessor/create_clock_delay_domain_1_clk_R_0 .clock_network_latency_included true
 external_delay -accumulate -input {no_value 0.0 no_value 0.0} -clock clock:coprocessor/clk -edge_fall -name create_clock_delay_domain_1_clk_F_0 port:coprocessor/clk
 set_db -quiet external_delay:coprocessor/create_clock_delay_domain_1_clk_F_0 .clock_network_latency_included true
-external_delay -accumulate -input {729.9 729.9 729.9 729.9} -clock clock:coprocessor/clk -name in_del port:coprocessor/rst
-external_delay -accumulate -input {729.9 729.9 729.9 729.9} -clock clock:coprocessor/clk -name in_del_1_1 port:coprocessor/rx
-external_delay -accumulate -output {729.9 729.9 729.9 729.9} -clock clock:coprocessor/clk -name ou_del port:coprocessor/tx
+external_delay -accumulate -input {1030.9 1030.9 1030.9 1030.9} -clock clock:coprocessor/clk -name in_del port:coprocessor/rst
+external_delay -accumulate -input {1030.9 1030.9 1030.9 1030.9} -clock clock:coprocessor/clk -name in_del_1_1 port:coprocessor/rx
+external_delay -accumulate -output {1030.9 1030.9 1030.9 1030.9} -clock clock:coprocessor/clk -name ou_del port:coprocessor/tx
 path_group -paths [specify_paths -lenient -to clock:coprocessor/clk]  -name clk -group cost_group:coprocessor/clk -user_priority -1047552
 # BEGIN DFT SECTION
 set_db -quiet dft_scan_style muxed_scan
 set_db -quiet dft_scanbit_waveform_analysis false
 # END DFT SECTION
 set_db -quiet design:coprocessor .seq_reason_deleted_internal {{{state_reg[3]} {{constant 0}} {state[3]}} {{status_r_reg[2]} {{constant 0}} {status_r[2]}} {{status_r_reg[3]} {{constant 0}} {status_r[3]}} {{status_r_reg[4]} {{constant 0}} {status_r[4]}} {{status_r_reg[5]} {{constant 0}} {status_r[5]}} {{status_r_reg[6]} {{constant 0}} {status_r[6]}} {{status_r_reg[7]} {{constant 0}} {status_r[7]}}}
-set_db -quiet design:coprocessor .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 82888} {cell_count 10089} {utilization  0.00} {runtime 76 86 76 83} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 75551} {cell_count 8687} {utilization  0.00} {runtime 24 114 30 118} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 73269} {cell_count 8407} {utilization  0.00} {runtime 37 153 42 163} }{reify {wns -2266} {tns 35609} {vep 18} {area 48831} {cell_count 9540} {utilization  0.00} {runtime 14 167 32 195} }{global_incr_map {wns -2308} {tns 36235} {vep 18} {area 35610} {cell_count 6280} {utilization  0.00} {runtime 8 176 8 204} }{incr_opt {wns -239} {tns 2943} {vep 17} {area 41025} {cell_count 7485} {utilization  0.00} {runtime 487 670 489 701} }}
+set_db -quiet design:coprocessor .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 77129} {cell_count 9090} {utilization  0.00} {runtime 42 52 41 48} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 78451} {cell_count 9031} {utilization  0.00} {runtime 10 64 12 64} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76296} {cell_count 8768} {utilization  0.00} {runtime 8 74 10 77} }{reify {wns 73104} {tns 0} {vep 0} {area 27129} {cell_count 3907} {utilization  0.00} {runtime 11 85 21 99} }{global_incr_map {wns 73425} {tns 0} {vep 0} {area 27013} {cell_count 3861} {utilization  0.00} {runtime 1 86 1 100} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 26913} {cell_count 3831} {utilization  0.00} {runtime 3 97 3 111} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 51682} {cell_count 4048} {utilization  0.00} {runtime 0 99 0 113} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 79698} {cell_count 9156} {utilization  0.00} {runtime 84 210 91 232} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 78326} {cell_count 8993} {utilization  0.00} {runtime 88 314 93 341} }{reify {wns -4996} {tns 82218} {vep 18} {area 52027} {cell_count 10232} {utilization  0.00} {runtime 23 338 44 385} }{global_incr_map {wns -4987} {tns 82209} {vep 18} {area 38973} {cell_count 6966} {utilization  0.00} {runtime 11 349 11 397} }{incr_opt {wns -3884} {tns 66767} {vep 18} {area 43203} {cell_count 7801} {utilization  0.00} {runtime 449 806 449 856} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 71712} {cell_count 6824} {utilization  0.00} {runtime 0 808 0 858} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 77762} {cell_count 8927} {utilization  0.00} {runtime 70 897 75 953} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 77063} {cell_count 8844} {utilization  0.00} {runtime 62 974 66 1034} }{reify {wns -1134} {tns 15696} {vep 17} {area 53660} {cell_count 10740} {utilization  0.00} {runtime 20 994 37 1072} }{global_incr_map {wns -1115} {tns 15549} {vep 17} {area 39091} {cell_count 7098} {utilization  0.00} {runtime 12 1006 12 1085} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 43872} {cell_count 7940} {utilization  0.00} {runtime 416 1426 417 1507} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 71621} {cell_count 6825} {utilization  0.00} {runtime 0 1428 0 1509} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 77161} {cell_count 8856} {utilization  0.00} {runtime 64 1509 68 1596} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 77131} {cell_count 8838} {utilization  0.00} {runtime 71 1598 75 1689} }{reify {wns -3287} {tns 52982} {vep 18} {area 52322} {cell_count 10533} {utilization  0.00} {runtime 16 1614 34 1724} }{global_incr_map {wns -3318} {tns 53904} {vep 18} {area 39131} {cell_count 7191} {utilization  0.00} {runtime 12 1626 11 1736} }{incr_opt {wns -2363} {tns 39320} {vep 17} {area 42528} {cell_count 7817} {utilization  0.00} {runtime 433 2065 436 2179} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 70708} {cell_count 6767} {utilization  0.00} {runtime 1 2067 0 2181} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 77090} {cell_count 8847} {utilization  0.00} {runtime 69 2151 74 2272} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 77431} {cell_count 8881} {utilization  0.00} {runtime 76 2246 81 2373} }{reify {wns -2083} {tns 30532} {vep 16} {area 52982} {cell_count 10686} {utilization  0.00} {runtime 22 2268 41 2415} }{global_incr_map {wns -2091} {tns 30880} {vep 16} {area 39461} {cell_count 7260} {utilization  0.00} {runtime 11 2279 11 2426} }{incr_opt {wns -1219} {tns 18863} {vep 16} {area 43558} {cell_count 8015} {utilization  0.00} {runtime 410 2701 412 2851} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 71450} {cell_count 6876} {utilization  0.00} {runtime 0 2703 0 2854} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 77445} {cell_count 8889} {utilization  0.00} {runtime 78 2798 84 2956} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76771} {cell_count 8809} {utilization  0.00} {runtime 49 2862 54 3026} }{reify {wns -1534} {tns 22783} {vep 16} {area 53172} {cell_count 10654} {utilization  0.00} {runtime 23 2885 44 3071} }{global_incr_map {wns -1562} {tns 23142} {vep 16} {area 39824} {cell_count 7287} {utilization  0.00} {runtime 11 2896 11 3082} }{incr_opt {wns -680} {tns 10261} {vep 16} {area 43198} {cell_count 7890} {utilization  0.00} {runtime 343 3249 344 3437} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 71050} {cell_count 6810} {utilization  0.00} {runtime 0 3251 0 3439} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76825} {cell_count 8815} {utilization  0.00} {runtime 73 3338 78 3533} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76531} {cell_count 8780} {utilization  0.00} {runtime 39 3393 43 3593} }{reify {wns -940} {tns 13222} {vep 16} {area 51872} {cell_count 10383} {utilization  0.00} {runtime 39 3432 59 3652} }{global_incr_map {wns -903} {tns 12816} {vep 16} {area 39141} {cell_count 7217} {utilization  0.00} {runtime 11 3443 11 3663} }{incr_opt {wns -129} {tns 1573} {vep 14} {area 43062} {cell_count 7960} {utilization  0.00} {runtime 413 3864 416 4089} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 71418} {cell_count 6899} {utilization  0.00} {runtime 0 3865 0 4091} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76587} {cell_count 8787} {utilization  0.00} {runtime 66 3949 70 4180} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76436} {cell_count 8769} {utilization  0.00} {runtime 48 4014 52 4250} }{reify {wns -695} {tns 9689} {vep 16} {area 52297} {cell_count 10459} {utilization  0.00} {runtime 20 4034 38 4289} }{global_incr_map {wns -679} {tns 9467} {vep 16} {area 39121} {cell_count 7211} {utilization  0.00} {runtime 12 4046 11 4301} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 42543} {cell_count 7794} {utilization  0.00} {runtime 240 4295 242 4553} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 70618} {cell_count 6767} {utilization  0.00} {runtime 1 4297 0 4555} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76688} {cell_count 8799} {utilization  0.00} {runtime 62 4374 67 4640} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76621} {cell_count 8791} {utilization  0.00} {runtime 69 4461 73 4731} }{reify {wns -867} {tns 12169} {vep 16} {area 52330} {cell_count 10564} {utilization  0.00} {runtime 17 4478 35 4766} }{global_incr_map {wns -845} {tns 11568} {vep 16} {area 38779} {cell_count 7159} {utilization  0.00} {runtime 11 4489 11 4778} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 42385} {cell_count 7799} {utilization  0.00} {runtime 258 4755 260 5047} }{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 70669} {cell_count 6797} {utilization  0.00} {runtime 0 4757 0 5049} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76743} {cell_count 8806} {utilization  0.00} {runtime 90 4861 99 5164} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 76600} {cell_count 8782} {utilization  0.00} {runtime 45 4925 50 5233} }{reify {wns 543} {tns 0} {vep 0} {area 35840} {cell_count 6243} {utilization  0.00} {runtime 21 4946 36 5270} }{global_incr_map {wns 391} {tns 0} {vep 0} {area 32099} {cell_count 5405} {utilization  0.00} {runtime 4 4951 4 5274} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 31511} {cell_count 5233} {utilization  0.00} {runtime 9 4961 9 5285} }}
 set_db -quiet design:coprocessor .seq_mbci_coverage 0.0
 set_db -quiet design:coprocessor .hdl_user_name coprocessor
 set_db -quiet design:coprocessor .hdl_filelist {{default -sv {SYNTHESIS} {../../rtl/posit_primitives.sv ../../rtl/posit_decoder.sv ../../rtl/posit_encoder.sv ../../rtl/posit_addsub.sv ../../rtl/posit_muldiv.sv ../../rtl/posit_to_float.sv ../../rtl/float_to_posit.sv ../../rtl/posit_arithmetic.sv ../../rtl/uart_head.sv ../../rtl/coprocessor.sv} {} {}}}
@@ -127,22 +127,9 @@ set_db -quiet port:coprocessor/clk .original_name clk
 set_db -quiet port:coprocessor/rst .original_name rst
 set_db -quiet port:coprocessor/rx .original_name rx
 set_db -quiet port:coprocessor/tx .original_name tx
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .original_name uart_inst/uart_rx_inst/rx_ff1
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .orig_hdl_instantiated false
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .single_bit_orig_name uart_inst/uart_rx_inst/rx_ff1
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .gint_phase_inversion false
-set_db -quiet pin:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg/Q .original_name uart_inst/uart_rx_inst/rx_ff1/q
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .original_name uart_inst/uart_tx_inst/tx
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .orig_hdl_instantiated false
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .single_bit_orig_name uart_inst/uart_tx_inst/tx
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .gint_phase_inversion false
-set_db -quiet pin:coprocessor/uart_inst_uart_tx_inst_tx_reg/Q .original_name uart_inst/uart_tx_inst/tx/q
-set_db -quiet inst:coprocessor/uart_tx_start_reg .original_name uart_tx_start
-set_db -quiet inst:coprocessor/uart_tx_start_reg .orig_hdl_instantiated false
-set_db -quiet inst:coprocessor/uart_tx_start_reg .single_bit_orig_name uart_tx_start
-set_db -quiet inst:coprocessor/uart_tx_start_reg .gint_phase_inversion false
-set_db -quiet pin:coprocessor/uart_tx_start_reg/Q .original_name uart_tx_start/q
-set_db -quiet inst:coprocessor/g127067 .seq_dup_name_count 1
+set_db -quiet module:coprocessor/posit_arithmetic_DATA_BITS16_N_VAL2 .hdl_user_name posit_arithmetic
+set_db -quiet module:coprocessor/posit_arithmetic_DATA_BITS16_N_VAL2 .hdl_filelist {{default -sv {SYNTHESIS} {../../rtl/posit_primitives.sv ../../rtl/posit_decoder.sv ../../rtl/posit_encoder.sv ../../rtl/posit_addsub.sv ../../rtl/posit_muldiv.sv ../../rtl/posit_to_float.sv ../../rtl/float_to_posit.sv ../../rtl/posit_arithmetic.sv} {} {}}}
+set_db -quiet module:coprocessor/posit_arithmetic_DATA_BITS16_N_VAL2 .lp_clock_gating_max_flops inf
 set_db -quiet {inst:coprocessor/byte_cnt_reg[0]} .original_name {{byte_cnt[0]}}
 set_db -quiet {inst:coprocessor/byte_cnt_reg[0]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/byte_cnt_reg[0]} .single_bit_orig_name {byte_cnt[0]}
@@ -403,11 +390,6 @@ set_db -quiet {inst:coprocessor/result_r_reg[15]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/result_r_reg[15]} .single_bit_orig_name {result_r[15]}
 set_db -quiet {inst:coprocessor/result_r_reg[15]} .gint_phase_inversion false
 set_db -quiet {pin:coprocessor/result_r_reg[15]/Q} .original_name {result_r[15]/q}
-set_db -quiet {inst:coprocessor/state_reg[0]} .original_name {{state[0]}}
-set_db -quiet {inst:coprocessor/state_reg[0]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/state_reg[0]} .single_bit_orig_name {state[0]}
-set_db -quiet {inst:coprocessor/state_reg[0]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/state_reg[0]/Q} .original_name {state[0]/q}
 set_db -quiet {inst:coprocessor/status_r_reg[0]} .original_name {{status_r[0]}}
 set_db -quiet {inst:coprocessor/status_r_reg[0]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/status_r_reg[0]} .single_bit_orig_name {status_r[0]}
@@ -418,41 +400,11 @@ set_db -quiet {inst:coprocessor/status_r_reg[1]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/status_r_reg[1]} .single_bit_orig_name {status_r[1]}
 set_db -quiet {inst:coprocessor/status_r_reg[1]} .gint_phase_inversion false
 set_db -quiet {pin:coprocessor/status_r_reg[1]/Q} .original_name {status_r[1]/q}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .original_name {{uart_inst/baud_gen_inst/count[0]}}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[0]}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[0]/Q} .original_name {uart_inst/baud_gen_inst/count[0]/q}
 set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[1]} .original_name {{uart_inst/baud_gen_inst/count[1]}}
 set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[1]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[1]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[1]}
 set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[1]} .gint_phase_inversion false
 set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[1]/Q} .original_name {uart_inst/baud_gen_inst/count[1]/q}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .original_name {{uart_inst/baud_gen_inst/count[2]}}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[2]}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[2]/Q} .original_name {uart_inst/baud_gen_inst/count[2]/q}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .original_name {{uart_inst/baud_gen_inst/count[3]}}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[3]}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[3]/Q} .original_name {uart_inst/baud_gen_inst/count[3]/q}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .original_name {{uart_inst/baud_gen_inst/count[4]}}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[4]}
-set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[4]/Q} .original_name {uart_inst/baud_gen_inst/count[4]/q}
-set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .original_name uart_inst/baud_gen_inst/tick
-set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .orig_hdl_instantiated false
-set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .single_bit_orig_name uart_inst/baud_gen_inst/tick
-set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .gint_phase_inversion false
-set_db -quiet pin:coprocessor/uart_inst_baud_gen_inst_tick_reg/Q .original_name uart_inst/baud_gen_inst/tick/q
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .original_name {{uart_inst/uart_rx_inst/bit_count[1]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/bit_count[1]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/bit_count[1]/q}
 set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[2]} .original_name {{uart_inst/uart_rx_inst/bit_count[2]}}
 set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[2]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[2]} .single_bit_orig_name {uart_inst/uart_rx_inst/bit_count[2]}
@@ -498,81 +450,6 @@ set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_data_rx_reg[7]} .orig_hdl
 set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_data_rx_reg[7]} .single_bit_orig_name {uart_inst/uart_rx_inst/data_rx[7]}
 set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_data_rx_reg[7]} .gint_phase_inversion false
 set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_data_rx_reg[7]/Q} .original_name {uart_inst/uart_rx_inst/data_rx[7]/q}
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .original_name uart_inst/uart_rx_inst/rx_valid
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .orig_hdl_instantiated false
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .single_bit_orig_name uart_inst/uart_rx_inst/rx_valid
-set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .gint_phase_inversion false
-set_db -quiet pin:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg/Q .original_name uart_inst/uart_rx_inst/rx_valid/q
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .original_name {{uart_inst/uart_rx_inst/shift_reg[0]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[0]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[0]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .original_name {{uart_inst/uart_rx_inst/shift_reg[1]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[1]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[1]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .original_name {{uart_inst/uart_rx_inst/shift_reg[2]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[2]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[2]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .original_name {{uart_inst/uart_rx_inst/shift_reg[3]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[3]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[3]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .original_name {{uart_inst/uart_rx_inst/shift_reg[4]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[4]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[4]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .original_name {{uart_inst/uart_rx_inst/shift_reg[5]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[5]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[5]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .original_name {{uart_inst/uart_rx_inst/shift_reg[6]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[6]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[6]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .original_name {{uart_inst/uart_rx_inst/shift_reg[7]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[7]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[7]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .original_name {{uart_inst/uart_rx_inst/tick_count[0]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[0]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[0]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .original_name {{uart_inst/uart_rx_inst/tick_count[1]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[1]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[1]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .original_name {{uart_inst/uart_rx_inst/tick_count[2]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[2]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[2]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .original_name {{uart_inst/uart_rx_inst/tick_count[3]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[3]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[3]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .original_name {{uart_inst/uart_tx_inst/bit_count[1]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .single_bit_orig_name {uart_inst/uart_tx_inst/bit_count[1]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]/Q} .original_name {uart_inst/uart_tx_inst/bit_count[1]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .original_name {{uart_inst/uart_tx_inst/bit_count[2]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .single_bit_orig_name {uart_inst/uart_tx_inst/bit_count[2]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]/Q} .original_name {uart_inst/uart_tx_inst/bit_count[2]/q}
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_shift_reg_reg[0]} .original_name {{uart_inst/uart_tx_inst/shift_reg[0]}}
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_shift_reg_reg[0]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_shift_reg_reg[0]} .single_bit_orig_name {uart_inst/uart_tx_inst/shift_reg[0]}
@@ -613,6 +490,151 @@ set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_shift_reg_reg[7]} .orig_h
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_shift_reg_reg[7]} .single_bit_orig_name {uart_inst/uart_tx_inst/shift_reg[7]}
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_shift_reg_reg[7]} .gint_phase_inversion false
 set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_shift_reg_reg[7]/Q} .original_name {uart_inst/uart_tx_inst/shift_reg[7]/q}
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .original_name uart_inst/uart_tx_inst/tx_done
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .orig_hdl_instantiated false
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .single_bit_orig_name uart_inst/uart_tx_inst/tx_done
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .gint_phase_inversion false
+set_db -quiet pin:coprocessor/uart_inst_uart_tx_inst_tx_done_reg/Q .original_name uart_inst/uart_tx_inst/tx_done/q
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .original_name uart_inst/uart_rx_inst/rx_valid
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .orig_hdl_instantiated false
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .single_bit_orig_name uart_inst/uart_rx_inst/rx_valid
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg .gint_phase_inversion false
+set_db -quiet pin:coprocessor/uart_inst_uart_rx_inst_rx_valid_reg/Q .original_name uart_inst/uart_rx_inst/rx_valid/q
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .original_name uart_inst/uart_tx_inst/tx
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .orig_hdl_instantiated false
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .single_bit_orig_name uart_inst/uart_tx_inst/tx
+set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_reg .gint_phase_inversion false
+set_db -quiet pin:coprocessor/uart_inst_uart_tx_inst_tx_reg/Q .original_name uart_inst/uart_tx_inst/tx/q
+set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .original_name uart_inst/baud_gen_inst/tick
+set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .orig_hdl_instantiated false
+set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .single_bit_orig_name uart_inst/baud_gen_inst/tick
+set_db -quiet inst:coprocessor/uart_inst_baud_gen_inst_tick_reg .gint_phase_inversion false
+set_db -quiet pin:coprocessor/uart_inst_baud_gen_inst_tick_reg/Q .original_name uart_inst/baud_gen_inst/tick/q
+set_db -quiet inst:coprocessor/uart_tx_start_reg .original_name uart_tx_start
+set_db -quiet inst:coprocessor/uart_tx_start_reg .orig_hdl_instantiated false
+set_db -quiet inst:coprocessor/uart_tx_start_reg .single_bit_orig_name uart_tx_start
+set_db -quiet inst:coprocessor/uart_tx_start_reg .gint_phase_inversion false
+set_db -quiet pin:coprocessor/uart_tx_start_reg/Q .original_name uart_tx_start/q
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .original_name uart_inst/uart_rx_inst/rx_ff1
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .orig_hdl_instantiated false
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .single_bit_orig_name uart_inst/uart_rx_inst/rx_ff1
+set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg .gint_phase_inversion false
+set_db -quiet pin:coprocessor/uart_inst_uart_rx_inst_rx_ff1_reg/Q .original_name uart_inst/uart_rx_inst/rx_ff1/q
+set_db -quiet {inst:coprocessor/state_reg[1]} .original_name {{state[1]}}
+set_db -quiet {inst:coprocessor/state_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/state_reg[1]} .single_bit_orig_name {state[1]}
+set_db -quiet {inst:coprocessor/state_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/state_reg[1]/Q} .original_name {state[1]/q}
+set_db -quiet {inst:coprocessor/state_reg[2]} .original_name {{state[2]}}
+set_db -quiet {inst:coprocessor/state_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/state_reg[2]} .single_bit_orig_name {state[2]}
+set_db -quiet {inst:coprocessor/state_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/state_reg[2]/Q} .original_name {state[2]/q}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .original_name {{uart_inst/baud_gen_inst/count[0]}}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[0]}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[0]/Q} .original_name {uart_inst/baud_gen_inst/count[0]/q}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .original_name {{uart_inst/baud_gen_inst/count[2]}}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[2]}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[2]/Q} .original_name {uart_inst/baud_gen_inst/count[2]/q}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .original_name {{uart_inst/baud_gen_inst/count[3]}}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[3]}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[3]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[3]/Q} .original_name {uart_inst/baud_gen_inst/count[3]/q}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .original_name {{uart_inst/baud_gen_inst/count[4]}}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .single_bit_orig_name {uart_inst/baud_gen_inst/count[4]}
+set_db -quiet {inst:coprocessor/uart_inst_baud_gen_inst_count_reg[4]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_baud_gen_inst_count_reg[4]/Q} .original_name {uart_inst/baud_gen_inst/count[4]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .original_name {{uart_inst/uart_rx_inst/bit_count[0]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/bit_count[0]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/bit_count[0]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .original_name {{uart_inst/uart_rx_inst/bit_count[1]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/bit_count[1]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/bit_count[1]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .original_name {{uart_inst/uart_rx_inst/shift_reg[0]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[0]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[0]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .original_name {{uart_inst/uart_rx_inst/shift_reg[1]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[1]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[1]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .original_name {{uart_inst/uart_rx_inst/shift_reg[2]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[2]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[2]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[2]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .original_name {{uart_inst/uart_rx_inst/shift_reg[3]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[3]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[3]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[3]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .original_name {{uart_inst/uart_rx_inst/shift_reg[4]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[4]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[4]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[4]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .original_name {{uart_inst/uart_rx_inst/shift_reg[5]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[5]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[5]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[5]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .original_name {{uart_inst/uart_rx_inst/shift_reg[6]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[6]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[6]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[6]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .original_name {{uart_inst/uart_rx_inst/shift_reg[7]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .single_bit_orig_name {uart_inst/uart_rx_inst/shift_reg[7]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_shift_reg_reg[7]/Q} .original_name {uart_inst/uart_rx_inst/shift_reg[7]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .original_name {{uart_inst/uart_rx_inst/state[1]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/state[1]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_state_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/state[1]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .original_name {{uart_inst/uart_rx_inst/tick_count[0]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[0]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[0]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .original_name {{uart_inst/uart_rx_inst/tick_count[1]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[1]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[1]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .original_name {{uart_inst/uart_rx_inst/tick_count[2]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[2]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[2]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[2]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .original_name {{uart_inst/uart_rx_inst/tick_count[3]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .single_bit_orig_name {uart_inst/uart_rx_inst/tick_count[3]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_tick_count_reg[3]/Q} .original_name {uart_inst/uart_rx_inst/tick_count[3]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .original_name {{uart_inst/uart_tx_inst/bit_count[0]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .single_bit_orig_name {uart_inst/uart_tx_inst/bit_count[0]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]/Q} .original_name {uart_inst/uart_tx_inst/bit_count[0]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .original_name {{uart_inst/uart_tx_inst/bit_count[1]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .single_bit_orig_name {uart_inst/uart_tx_inst/bit_count[1]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[1]/Q} .original_name {uart_inst/uart_tx_inst/bit_count[1]/q}
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_state_reg[0]} .original_name {{uart_inst/uart_tx_inst/state[0]}}
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_state_reg[0]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_state_reg[0]} .single_bit_orig_name {uart_inst/uart_tx_inst/state[0]}
@@ -643,11 +665,6 @@ set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_tick_count_reg[3]} .orig_
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_tick_count_reg[3]} .single_bit_orig_name {uart_inst/uart_tx_inst/tick_count[3]}
 set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_tick_count_reg[3]} .gint_phase_inversion false
 set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_tick_count_reg[3]/Q} .original_name {uart_inst/uart_tx_inst/tick_count[3]/q}
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .original_name uart_inst/uart_tx_inst/tx_done
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .orig_hdl_instantiated false
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .single_bit_orig_name uart_inst/uart_tx_inst/tx_done
-set_db -quiet inst:coprocessor/uart_inst_uart_tx_inst_tx_done_reg .gint_phase_inversion false
-set_db -quiet pin:coprocessor/uart_inst_uart_tx_inst_tx_done_reg/Q .original_name uart_inst/uart_tx_inst/tx_done/q
 set_db -quiet {inst:coprocessor/uart_tx_data_reg[0]} .original_name {{uart_tx_data[0]}}
 set_db -quiet {inst:coprocessor/uart_tx_data_reg[0]} .orig_hdl_instantiated false
 set_db -quiet {inst:coprocessor/uart_tx_data_reg[0]} .single_bit_orig_name {uart_tx_data[0]}
@@ -688,48 +705,30 @@ set_db -quiet {inst:coprocessor/uart_tx_data_reg[7]} .orig_hdl_instantiated fals
 set_db -quiet {inst:coprocessor/uart_tx_data_reg[7]} .single_bit_orig_name {uart_tx_data[7]}
 set_db -quiet {inst:coprocessor/uart_tx_data_reg[7]} .gint_phase_inversion false
 set_db -quiet {pin:coprocessor/uart_tx_data_reg[7]/Q} .original_name {uart_tx_data[7]/q}
-set_db -quiet {inst:coprocessor/state_reg[1]} .original_name {{state[1]}}
-set_db -quiet {inst:coprocessor/state_reg[1]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/state_reg[1]} .single_bit_orig_name {state[1]}
-set_db -quiet {inst:coprocessor/state_reg[1]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/state_reg[1]/Q} .original_name {state[1]/q}
-set_db -quiet {pin:coprocessor/state_reg[1]/Q_N} .original_name {state[1]/q}
-set_db -quiet {inst:coprocessor/state_reg[2]} .original_name {{state[2]}}
-set_db -quiet {inst:coprocessor/state_reg[2]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/state_reg[2]} .single_bit_orig_name {state[2]}
-set_db -quiet {inst:coprocessor/state_reg[2]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/state_reg[2]/Q} .original_name {state[2]/q}
-set_db -quiet {pin:coprocessor/state_reg[2]/Q_N} .original_name {state[2]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .original_name {{uart_inst/uart_rx_inst/bit_count[0]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/bit_count[0]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/bit_count[0]/q}
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_bit_count_reg[0]/Q_N} .original_name {uart_inst/uart_rx_inst/bit_count[0]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .original_name {{uart_inst/uart_rx_inst/state[0]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/state[0]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_state_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/state[0]/q}
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_state_reg[0]/Q_N} .original_name {uart_inst/uart_rx_inst/state[0]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .original_name {{uart_inst/uart_rx_inst/state[1]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .single_bit_orig_name {uart_inst/uart_rx_inst/state[1]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[1]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_state_reg[1]/Q} .original_name {uart_inst/uart_rx_inst/state[1]/q}
-set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_state_reg[1]/Q_N} .original_name {uart_inst/uart_rx_inst/state[1]/q}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .original_name {{uart_inst/uart_tx_inst/bit_count[0]}}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .orig_hdl_instantiated false
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .single_bit_orig_name {uart_inst/uart_tx_inst/bit_count[0]}
-set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]} .gint_phase_inversion false
-set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]/Q} .original_name {uart_inst/uart_tx_inst/bit_count[0]/q}
-set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[0]/Q_N} .original_name {uart_inst/uart_tx_inst/bit_count[0]/q}
+set_db -quiet {inst:coprocessor/state_reg[0]} .original_name {{state[0]}}
+set_db -quiet {inst:coprocessor/state_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/state_reg[0]} .single_bit_orig_name {state[0]}
+set_db -quiet {inst:coprocessor/state_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/state_reg[0]/Q} .original_name {state[0]/q}
+set_db -quiet {pin:coprocessor/state_reg[0]/Q_N} .original_name {state[0]/q}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .original_name {{uart_inst/uart_tx_inst/bit_count[2]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .single_bit_orig_name {uart_inst/uart_tx_inst/bit_count[2]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]/Q} .original_name {uart_inst/uart_tx_inst/bit_count[2]/q}
+set_db -quiet {pin:coprocessor/uart_inst_uart_tx_inst_bit_count_reg[2]/Q_N} .original_name {uart_inst/uart_tx_inst/bit_count[2]/q}
 set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_sync_reg .original_name uart_inst/uart_rx_inst/rx_sync
 set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_sync_reg .orig_hdl_instantiated false
 set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_sync_reg .single_bit_orig_name uart_inst/uart_rx_inst/rx_sync
 set_db -quiet inst:coprocessor/uart_inst_uart_rx_inst_rx_sync_reg .gint_phase_inversion false
 set_db -quiet pin:coprocessor/uart_inst_uart_rx_inst_rx_sync_reg/Q .original_name uart_inst/uart_rx_inst/rx_sync/q
 set_db -quiet pin:coprocessor/uart_inst_uart_rx_inst_rx_sync_reg/Q_N .original_name uart_inst/uart_rx_inst/rx_sync/q
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .original_name {{uart_inst/uart_rx_inst/state[0]}}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .orig_hdl_instantiated false
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .single_bit_orig_name {uart_inst/uart_rx_inst/state[0]}
+set_db -quiet {inst:coprocessor/uart_inst_uart_rx_inst_state_reg[0]} .gint_phase_inversion false
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_state_reg[0]/Q} .original_name {uart_inst/uart_rx_inst/state[0]/q}
+set_db -quiet {pin:coprocessor/uart_inst_uart_rx_inst_state_reg[0]/Q_N} .original_name {uart_inst/uart_rx_inst/state[0]/q}
 # BEGIN PMBIST SECTION
 # END PMBIST SECTION
 set_db -quiet source_verbose true
@@ -738,7 +737,7 @@ set_db -quiet source_verbose true
 ##
 ## Written by Genus(TM) Synthesis Solution version 21.14-s082_1
 ## flowkit v21.12-s008_1
-## Written on 19:00:00 23-Sep 2026
+## Written on 21:16:24 23-Sep 2026
 #############################################################
 #####   Flow Definitions   ##################################
 
@@ -793,7 +792,7 @@ if {[is_attribute flow_step_next -obj_type root]} {set_db flow_step_next {}}
 if {[is_attribute flow_working_directory -obj_type root]} {set_db flow_working_directory .}
 if {[is_attribute flow_branch -obj_type root]} {set_db flow_branch {}}
 if {[is_attribute flow_caller_data -obj_type root]} {set_db flow_caller_data {}}
-if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid e23c3a18-f63b-41a8-acb0-1fd6b559f9cd}
+if {[is_attribute flow_metrics_snapshot_uuid -obj_type root]} {set_db flow_metrics_snapshot_uuid 155acee4-8b00-4c78-8df5-fc642aae7318}
 if {[is_attribute flow_starting_db -obj_type root]} {set_db flow_starting_db {}}
 if {[is_attribute flow_db_directory -obj_type root]} {set_db flow_db_directory dbs}
 if {[is_attribute flow_report_directory -obj_type root]} {set_db flow_report_directory reports}
