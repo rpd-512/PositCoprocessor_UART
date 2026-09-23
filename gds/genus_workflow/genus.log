@@ -3,22 +3,22 @@ Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
 Cadence and the Cadence logo are registered trademarks and Genus is a trademark
 of Cadence Design Systems, Inc. in the United States and other countries.
 
-[19:53:02.275873] Configured Lic search path (21.01-s002): 5280@14.139.1.126
+[03:08:02.275817] Configured Lic search path (21.01-s002): 5280@14.139.1.126
 
 Version: 21.14-s082_1, built Thu Jun 23 02:02:08 PDT 2022
-Options: -tmux 
-Date:    Wed Sep 23 19:53:02 2026
+Options: -files fresh_point.tcl -no_gui 
+Date:    Thu Sep 24 03:08:02 2026
 Host:    vlsiece24.iitr.ac.in (x86_64 w/Linux 4.18.0-553.105.1.el8_10.x86_64) (8cores*16cpus*1physical cpu*11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz 16384KB) (15841608KB)
-PID:     1693657
+PID:     1893244
 OS:      Red Hat Enterprise Linux release 8.10 (Ootpa)
 
 
 Another Ctrl-C within 1 second will terminate the tool.
-CURRENT RESOURCES: RT {elapsed: 1s, ST: 0s, FG: 0s, CPU: 0.0%}, MEM {curr: 0.6G, peak: 0.6G, phys curr: 0.0G, phys peak: 0.0G}, SYS {load: 0.6, cpu: 16, total: 15.1G, free: 1.2G}
+CURRENT RESOURCES: RT {elapsed: 1s, ST: 0s, FG: 0s, CPU: 0.0%}, MEM {curr: 0.6G, peak: 0.6G, phys curr: 0.0G, phys peak: 0.0G}, SYS {load: 1.5, cpu: 16, total: 15.1G, free: 0.6G}
 
-[19:53:03.443067] Periodic Lic check successful
-[19:53:03.443072] Feature usage summary:
-[19:53:03.443072] Genus_Synthesis
+[03:08:03.467688] Periodic Lic check successful
+[03:08:03.467689] Feature usage summary:
+[03:08:03.467689] Genus_Synthesis
 Checking out license: Genus_Synthesis
 
 
@@ -29,5 +29,5 @@ Checking out license: Genus_Synthesis
 
 Loading tool scripts...
 Another Ctrl-C within 1 second will terminate the tool.
-CURRENT RESOURCES: RT {elapsed: 2s, ST: 0s, FG: 0s, CPU: 100.0%}, MEM {curr: 0.6G, peak: 0.6G, phys curr: 0.2G, phys peak: 0.2G}, SYS {load: 0.6, cpu: 16, total: 15.1G, free: 1.2G}
+CURRENT RESOURCES: RT {elapsed: 2s, ST: 1s, FG: 1s, CPU: 100.0%}, MEM {curr: 0.6G, peak: 0.6G, phys curr: 0.1G, phys peak: 0.1G}, SYS {load: 1.5, cpu: 16, total: 15.1G, free: 0.6G}
 Abnormal exit.
