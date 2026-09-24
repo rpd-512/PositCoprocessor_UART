@@ -112,7 +112,6 @@ add mapped point uart_inst/uart_tx_inst/shift_reg[4]/q uart_inst_uart_tx_inst_sh
 add mapped point uart_inst/uart_tx_inst/shift_reg[5]/q uart_inst_uart_tx_inst_shift_reg_reg[5]/Q -type DFF DFF
 add mapped point uart_inst/uart_tx_inst/shift_reg[6]/q uart_inst_uart_tx_inst_shift_reg_reg[6]/Q -type DFF DFF
 add mapped point uart_inst/uart_tx_inst/shift_reg[7]/q uart_inst_uart_tx_inst_shift_reg_reg[7]/Q -type DFF DFF
-add mapped point uart_inst/uart_tx_inst/state[0]/q uart_inst_uart_tx_inst_state_reg[0]/Q -type DFF DFF
 add mapped point uart_inst/uart_tx_inst/state[1]/q uart_inst_uart_tx_inst_state_reg[1]/Q -type DFF DFF
 add mapped point uart_inst/uart_tx_inst/tick_count[0]/q uart_inst_uart_tx_inst_tick_count_reg[0]/Q -type DFF DFF
 add mapped point uart_inst/uart_tx_inst/tick_count[1]/q uart_inst_uart_tx_inst_tick_count_reg[1]/Q -type DFF DFF
@@ -132,6 +131,7 @@ add mapped point state[2]/q state_reg[2]/Q -type DFF DFF
 add mapped point uart_inst/uart_rx_inst/bit_count[0]/q uart_inst_uart_rx_inst_bit_count_reg[0]/Q -type DFF DFF
 add mapped point uart_inst/uart_rx_inst/state[0]/q uart_inst_uart_rx_inst_state_reg[0]/Q -type DFF DFF
 add mapped point uart_inst/uart_rx_inst/state[1]/q uart_inst_uart_rx_inst_state_reg[1]/Q -type DFF DFF
+add mapped point uart_inst/uart_tx_inst/state[0]/q uart_inst_uart_tx_inst_state_reg[0]/Q -type DFF DFF
 
 
 

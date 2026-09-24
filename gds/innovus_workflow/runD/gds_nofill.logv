@@ -1,0 +1,554 @@
+[09/24 16:41:01      0s] 
+[09/24 16:41:01      0s] Cadence Innovus(TM) Implementation System.
+[09/24 16:41:01      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[09/24 16:41:01      0s] 
+[09/24 16:41:01      0s] Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+[09/24 16:41:01      0s] Options:	-no_gui -files gds_nofill.tcl -log runD/gds_nofill 
+[09/24 16:41:01      0s] Date:		Thu Sep 24 16:41:01 2026
+[09/24 16:41:01      0s] Host:		vlsiece24.iitr.ac.in (x86_64 w/Linux 4.18.0-553.105.1.el8_10.x86_64) (8cores*16cpus*11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz 16384KB)
+[09/24 16:41:01      0s] OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+[09/24 16:41:01      0s] 
+[09/24 16:41:01      0s] License:
+[09/24 16:41:01      0s] 		[16:41:01.275817] Configured Lic search path (21.01-s002): 5280@14.139.1.126
+
+[09/24 16:41:02      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[09/24 16:41:02      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[09/24 16:41:09      7s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+[09/24 16:41:11      8s] @(#)CDS: NanoRoute 21.15-s110_1 NR220912-2004/21_15-UB (database version 18.20.592) {superthreading v2.17}
+[09/24 16:41:11      8s] @(#)CDS: AAE 21.15-s039 (64bit) 09/23/2022 (Linux 3.10.0-693.el7.x86_64)
+[09/24 16:41:11      8s] @(#)CDS: CTE 21.15-s038_1 () Sep 20 2022 11:42:13 ( )
+[09/24 16:41:11      8s] @(#)CDS: SYNTECH 21.15-s012_1 () Sep  5 2022 10:25:51 ( )
+[09/24 16:41:11      8s] @(#)CDS: CPE v21.15-s076
+[09/24 16:41:11      8s] @(#)CDS: IQuantus/TQuantus 21.1.1-s867 (64bit) Sun Jun 26 22:12:54 PDT 2022 (Linux 3.10.0-693.el7.x86_64)
+[09/24 16:41:11      8s] @(#)CDS: OA 22.60-p076 Wed May 18 13:45:29 2022
+[09/24 16:41:11      8s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[09/24 16:41:11      8s] @(#)CDS: RCDB 11.15.0
+[09/24 16:41:11      8s] @(#)CDS: STYLUS 21.12-s013_1 (08/15/2022 08:25 PDT)
+[09/24 16:41:11      8s] @(#)CDS: SystemPlanner-21.15Rel-8720 (21.15) (2022-08-22 18:31:54+0800)
+[09/24 16:41:11      8s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_2270707_vlsiece24.iitr.ac.in_root_UMi8mx.
+
+[09/24 16:41:11      8s] Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+[09/24 16:41:11      9s] 
+[09/24 16:41:11      9s] **INFO:  MMMC transition support version v31-84 
+[09/24 16:41:11      9s] 
+[09/24 16:41:11      9s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[09/24 16:41:11      9s] <CMD> suppressMessage ENCEXT-2799
+[09/24 16:41:12      9s] <CMD> getVersion
+[09/24 16:41:12      9s] [INFO] Loading PVS 22.20 fill procedures
+[09/24 16:41:12      9s] **WARN: Tk package not loaded. The PVS fill DRC monitor is disabled.
+[09/24 16:41:12      9s] Sourcing file "gds_nofill.tcl" ...
+[09/24 16:41:12      9s] <CMD> restoreDesign ./runD/route.enc.dat coprocessor
+[09/24 16:41:12      9s] #% Begin load design ... (date=09/24 16:41:12, mem=865.8M)
+[09/24 16:41:12      9s] Loading design 'coprocessor' saved by 'Innovus' '21.15-s110_1' on 'Thu Sep 24 16:29:36 2026'.
+[09/24 16:41:12      9s] % Begin Load MMMC data ... (date=09/24 16:41:12, mem=869.2M)
+[09/24 16:41:12      9s] % End Load MMMC data ... (date=09/24 16:41:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=870.4M, current mem=870.4M)
+[09/24 16:41:12      9s] 
+[09/24 16:41:12      9s] Loading LEF file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/libs/lef/sky130_fd_sc_hd_innovus.tlef ...
+[09/24 16:41:12      9s] 
+[09/24 16:41:12      9s] Loading LEF file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/libs/lef/sky130_fd_sc_hd.lef ...
+[09/24 16:41:12      9s] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+[09/24 16:41:12      9s] The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/libs/lef/sky130_fd_sc_hd.lef at line 2.
+[09/24 16:41:12      9s] **WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+[09/24 16:41:12      9s] so you are unable to create rectilinear partition in a hierarchical flow.
+[09/24 16:41:12      9s] Set DBUPerIGU to M1 pitch 460.
+[09/24 16:41:12      9s] **WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probec_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/24 16:41:12      9s] Type 'man IMPLF-201' for more detail.
+[09/24 16:41:12      9s] **WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probe_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/24 16:41:12      9s] Type 'man IMPLF-201' for more detail.
+[09/24 16:41:12      9s] **WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__macro_sparecell' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/24 16:41:12      9s] Type 'man IMPLF-201' for more detail.
+[09/24 16:41:12      9s] **WARN: (IMPLF-201):	Pin 'HI' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/24 16:41:12      9s] Type 'man IMPLF-201' for more detail.
+[09/24 16:41:12      9s] **WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[09/24 16:41:12      9s] Type 'man IMPLF-201' for more detail.
+[09/24 16:41:12      9s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[09/24 16:41:12      9s] Loading view definition file from /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/viewDefinition.tcl
+[09/24 16:41:12      9s] Reading LIB_TYP timing library '/home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib' ...
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_6'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_4'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_3'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] **WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_12'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+[09/24 16:41:12      9s] Read 428 cells in library 'sky130_fd_sc_hd__tt_025C_1v80' 
+[09/24 16:41:12      9s] Ending "PreSetAnalysisView" (total cpu=0:00:00.2, real=0:00:00.0, peak res=937.7M, current mem=889.6M)
+[09/24 16:41:12      9s] *** End library_loading (cpu=0.00min, real=0.00min, mem=33.5M, fe_cpu=0.17min, fe_real=0.18min, fe_mem=993.5M) ***
+[09/24 16:41:12      9s] % Begin Load netlist data ... (date=09/24 16:41:12, mem=889.6M)
+[09/24 16:41:12      9s] *** Begin netlist parsing (mem=993.5M) ***
+[09/24 16:41:12      9s] Created 428 new cells from 1 timing libraries.
+[09/24 16:41:12      9s] Reading netlist ...
+[09/24 16:41:12      9s] Backslashed names will retain backslash and a trailing blank character.
+[09/24 16:41:12      9s] Reading verilogBinary netlist '/home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.v.bin'
+[09/24 16:41:12      9s] 
+[09/24 16:41:12      9s] *** Memory Usage v#1 (Current mem = 999.523M, initial mem = 483.887M) ***
+[09/24 16:41:12      9s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=999.5M) ***
+[09/24 16:41:13      9s] % End Load netlist data ... (date=09/24 16:41:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=899.4M, current mem=899.4M)
+[09/24 16:41:13     10s] Set top cell to coprocessor.
+[09/24 16:41:13     10s] Hooked 428 DB cells to tlib cells.
+[09/24 16:41:13     10s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=904.3M, current mem=904.3M)
+[09/24 16:41:13     10s] Starting recursive module instantiation check.
+[09/24 16:41:13     10s] No recursion found.
+[09/24 16:41:13     10s] Building hierarchical netlist for Cell coprocessor ...
+[09/24 16:41:13     10s] *** Netlist is unique.
+[09/24 16:41:13     10s] Setting Std. cell height to 2720 DBU (smallest netlist inst).
+[09/24 16:41:13     10s] ** info: there are 438 modules.
+[09/24 16:41:13     10s] ** info: there are 7014 stdCell insts.
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] *** Memory Usage v#1 (Current mem = 1044.938M, initial mem = 483.887M) ***
+[09/24 16:41:13     10s] *info: set bottom ioPad orient R0
+[09/24 16:41:13     10s] Adjust met3 preferred direction offset from 0.34 to 0.17.
+[09/24 16:41:13     10s] Adjust met4 preferred direction offset from 0.46 to 0.23.
+[09/24 16:41:13     10s] Adjust met5 preferred direction offset from 1.7 to 0.17.
+[09/24 16:41:13     10s] Start create_tracks
+[09/24 16:41:13     10s] Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+[09/24 16:41:13     10s] Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+[09/24 16:41:13     10s] Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+[09/24 16:41:13     10s] Loading preference file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/gui.pref.tcl ...
+[09/24 16:41:13     10s] **WARN: (IMPOPT-3602):	The specified path group name tdgp_reg2reg_default is not defined.
+[09/24 16:41:13     10s] Type 'man IMPOPT-3602' for more detail.
+[09/24 16:41:13     10s] Effort level <high> specified for tdgp_reg2reg_default path_group
+[09/24 16:41:13     10s] **WARN: (IMPOPT-3602):	The specified path group name reg2reg is not defined.
+[09/24 16:41:13     10s] Type 'man IMPOPT-3602' for more detail.
+[09/24 16:41:13     10s] Effort level <high> specified for reg2reg path_group
+[09/24 16:41:13     10s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[09/24 16:41:13     10s] AAE_INFO: switching -siAware from false to true ...
+[09/24 16:41:13     10s] AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+[09/24 16:41:13     10s] Change floorplan default-technical-site to 'unithd'.
+[09/24 16:41:13     10s] Extraction setup Delayed 
+[09/24 16:41:13     10s] *Info: initialize multi-corner CTS.
+[09/24 16:41:13     10s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1169.7M, current mem=932.4M)
+[09/24 16:41:13     10s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[09/24 16:41:13     10s] Summary for sequential cells identification: 
+[09/24 16:41:13     10s]   Identified SBFF number: 45
+[09/24 16:41:13     10s]   Identified MBFF number: 0
+[09/24 16:41:13     10s]   Identified SB Latch number: 0
+[09/24 16:41:13     10s]   Identified MB Latch number: 0
+[09/24 16:41:13     10s]   Not identified SBFF number: 0
+[09/24 16:41:13     10s]   Not identified MBFF number: 0
+[09/24 16:41:13     10s]   Not identified SB Latch number: 0
+[09/24 16:41:13     10s]   Not identified MB Latch number: 0
+[09/24 16:41:13     10s]   Number of sequential cells which are not FFs: 23
+[09/24 16:41:13     10s] Total number of combinational cells: 329
+[09/24 16:41:13     10s] Total number of sequential cells: 68
+[09/24 16:41:13     10s] Total number of tristate cells: 13
+[09/24 16:41:13     10s] Total number of level shifter cells: 7
+[09/24 16:41:13     10s] Total number of power gating cells: 0
+[09/24 16:41:13     10s] Total number of isolation cells: 11
+[09/24 16:41:13     10s] Total number of power switch cells: 0
+[09/24 16:41:13     10s] Total number of pulse generator cells: 0
+[09/24 16:41:13     10s] Total number of always on buffers: 0
+[09/24 16:41:13     10s] Total number of retention cells: 0
+[09/24 16:41:13     10s] List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+[09/24 16:41:13     10s] Total number of usable buffers: 15
+[09/24 16:41:13     10s] List of unusable buffers:
+[09/24 16:41:13     10s] Total number of unusable buffers: 0
+[09/24 16:41:13     10s] List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+[09/24 16:41:13     10s] Total number of usable inverters: 16
+[09/24 16:41:13     10s] List of unusable inverters:
+[09/24 16:41:13     10s] Total number of unusable inverters: 0
+[09/24 16:41:13     10s] List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+[09/24 16:41:13     10s] Total number of identified usable delay cells: 15
+[09/24 16:41:13     10s] List of identified unusable delay cells:
+[09/24 16:41:13     10s] Total number of identified unusable delay cells: 0
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Deleting Cell Server Begin ...
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Deleting Cell Server End ...
+[09/24 16:41:13     10s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1177.5M, current mem=1177.5M)
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign Begin ...
+[09/24 16:41:13     10s] Summary for sequential cells identification: 
+[09/24 16:41:13     10s]   Identified SBFF number: 45
+[09/24 16:41:13     10s]   Identified MBFF number: 0
+[09/24 16:41:13     10s]   Identified SB Latch number: 0
+[09/24 16:41:13     10s]   Identified MB Latch number: 0
+[09/24 16:41:13     10s]   Not identified SBFF number: 0
+[09/24 16:41:13     10s]   Not identified MBFF number: 0
+[09/24 16:41:13     10s]   Not identified SB Latch number: 0
+[09/24 16:41:13     10s]   Not identified MB Latch number: 0
+[09/24 16:41:13     10s]   Number of sequential cells which are not FFs: 23
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] Trim Metal Layers:
+[09/24 16:41:13     10s]  Visiting view : VIEW_TYP
+[09/24 16:41:13     10s]    : PowerDomain = none : Weighted F : unweighted  = 42.50 (1.000) with rcCorner = 0
+[09/24 16:41:13     10s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[09/24 16:41:13     10s]  Visiting view : VIEW_TYP
+[09/24 16:41:13     10s]    : PowerDomain = none : Weighted F : unweighted  = 42.50 (1.000) with rcCorner = 0
+[09/24 16:41:13     10s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign End ...
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Deleting Cell Server Begin ...
+[09/24 16:41:13     10s] 
+[09/24 16:41:13     10s] TimeStamp Deleting Cell Server End ...
+[09/24 16:41:13     10s] Reading floorplan file - /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.fp.gz (mem = 1287.6M).
+[09/24 16:41:13     10s] % Begin Load floorplan data ... (date=09/24 16:41:13, mem=1179.0M)
+[09/24 16:41:13     10s] *info: reset 7055 existing net BottomPreferredLayer and AvoidDetour
+[09/24 16:41:13     10s] Deleting old partition specification.
+[09/24 16:41:13     10s] Set FPlanBox to (0 0 329820 325040)
+[09/24 16:41:13     10s] Adjust met3 preferred direction offset from 0.34 to 0.17.
+[09/24 16:41:13     10s] Adjust met4 preferred direction offset from 0.46 to 0.23.
+[09/24 16:41:13     10s] Adjust met5 preferred direction offset from 1.7 to 0.17.
+[09/24 16:41:13     10s] Start create_tracks
+[09/24 16:41:13     10s] Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+[09/24 16:41:13     10s] Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+[09/24 16:41:13     10s] Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+[09/24 16:41:13     10s]  ... processed partition successfully.
+[09/24 16:41:13     10s] Reading binary special route file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.fp.spr.gz (Created by Innovus v21.15-s110_1 on Thu Sep 24 16:29:35 2026, version: 1)
+[09/24 16:41:13     10s] Convert 0 swires and 0 svias from compressed groups
+[09/24 16:41:13     10s] 0 swires and 0 svias were compressed
+[09/24 16:41:13     10s] 0 swires and 0 svias were decompressed from small or sparse groups
+[09/24 16:41:13     10s] Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1179.0M, current mem=1179.0M)
+[09/24 16:41:13     10s] There are 4 nets with weight being set
+[09/24 16:41:13     10s] There are 6 nets with bottomPreferredRoutingLayer being set
+[09/24 16:41:13     10s] There are 4 nets with avoidDetour being set
+[09/24 16:41:13     10s] Extracting standard cell pins and blockage ...... 
+[09/24 16:41:13     10s] Pin and blockage extraction finished
+[09/24 16:41:13     10s] % End Load floorplan data ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1181.4M, current mem=1181.4M)
+[09/24 16:41:13     10s] Reading congestion map file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.route.congmap.gz ...
+[09/24 16:41:13     10s] % Begin Load SymbolTable ... (date=09/24 16:41:13, mem=1181.6M)
+[09/24 16:41:13     10s] Suppress "**WARN ..." messages.
+[09/24 16:41:13     10s] routingBox: (0 0) (329820 325040)
+[09/24 16:41:13     10s] coreBox:    (10120 9860) (319700 315180)
+[09/24 16:41:13     10s] Un-suppress "**WARN ..." messages.
+[09/24 16:41:13     10s] % End Load SymbolTable ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1183.2M, current mem=1183.2M)
+[09/24 16:41:13     10s] Loading place ...
+[09/24 16:41:13     10s] % Begin Load placement data ... (date=09/24 16:41:13, mem=1183.2M)
+[09/24 16:41:13     10s] Reading placement file - /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.place.gz.
+[09/24 16:41:13     10s] ** Reading stdCellPlacement_binary (Created by Innovus v21.15-s110_1 on Thu Sep 24 16:29:35 2026, version# 2) ...
+[09/24 16:41:13     10s] Read Views for adaptive view pruning ...
+[09/24 16:41:13     10s] Read 0 views from Binary DB for adaptive view pruning
+[09/24 16:41:13     10s] *** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1293.6M) ***
+[09/24 16:41:13     10s] Total net length = 1.876e+05 (8.139e+04 1.062e+05) (ext = 0.000e+00)
+[09/24 16:41:13     10s] % End Load placement data ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1185.7M, current mem=1185.4M)
+[09/24 16:41:13     10s] % Begin Load routing data ... (date=09/24 16:41:13, mem=1185.4M)
+[09/24 16:41:13     10s] Reading routing file - /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.route.gz.
+[09/24 16:41:13     10s] Reading Innovus routing data (Created by Innovus v21.15-s110_1 on Thu Sep 24 16:29:35 2026 Format: 20.1) ...
+[09/24 16:41:13     10s] *** Total 7048 nets are successfully restored.
+[09/24 16:41:13     10s] *** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1299.6M) ***
+[09/24 16:41:13     10s] % End Load routing data ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1196.9M, current mem=1195.9M)
+[09/24 16:41:13     10s] TAT_INFO: restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+[09/24 16:41:13     10s] Reading property file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.prop
+[09/24 16:41:13     10s] *** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1302.6M) ***
+[09/24 16:41:14     10s] Reading dirtyarea snapshot file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.db.da.gz (Create by Innovus v21.15-s110_1 on Thu Sep 24 16:29:36 2026, version: 4).
+[09/24 16:41:14     10s] eee: readRCCornerMetaData, file read unsuccessful: /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/extraction/extractionMetaData.gz
+[09/24 16:41:14     10s] Extraction setup Started 
+[09/24 16:41:14     10s] 
+[09/24 16:41:14     10s] Trim Metal Layers:
+[09/24 16:41:14     10s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[09/24 16:41:14     10s] Type 'man IMPEXT-2773' for more detail.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[09/24 16:41:14     10s] Type 'man IMPEXT-2773' for more detail.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2773):	The via resistance between layers M2 and M3 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[09/24 16:41:14     10s] Type 'man IMPEXT-2773' for more detail.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2773):	The via resistance between layers M3 and M4 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[09/24 16:41:14     10s] Type 'man IMPEXT-2773' for more detail.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2773):	The via resistance between layers M4 and M5 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[09/24 16:41:14     10s] Type 'man IMPEXT-2773' for more detail.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2773):	The via resistance between layers M5 and M6 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[09/24 16:41:14     10s] Type 'man IMPEXT-2773' for more detail.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 12.2 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+[09/24 16:41:14     10s] **WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.0285 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+[09/24 16:41:14     10s] Summary of Active RC-Corners : 
+[09/24 16:41:14     10s]  
+[09/24 16:41:14     10s]  Analysis View: VIEW_TYP
+[09/24 16:41:14     10s]     RC-Corner Name        : RC_TYP
+[09/24 16:41:14     10s]     RC-Corner Index       : 0
+[09/24 16:41:14     10s]     RC-Corner Temperature : 25 Celsius
+[09/24 16:41:14     10s]     RC-Corner Cap Table   : ''
+[09/24 16:41:14     10s]     RC-Corner PreRoute Res Factor         : 1
+[09/24 16:41:14     10s]     RC-Corner PreRoute Cap Factor         : 1
+[09/24 16:41:14     10s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[09/24 16:41:14     10s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[09/24 16:41:14     10s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[09/24 16:41:14     10s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+[09/24 16:41:14     10s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+[09/24 16:41:14     10s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[09/24 16:41:14     10s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[09/24 16:41:14     10s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[09/24 16:41:14     10s] 
+[09/24 16:41:14     10s] Trim Metal Layers:
+[09/24 16:41:14     10s] LayerId::1 widthSet size::1
+[09/24 16:41:14     10s] LayerId::2 widthSet size::1
+[09/24 16:41:14     10s] LayerId::3 widthSet size::1
+[09/24 16:41:14     10s] LayerId::4 widthSet size::1
+[09/24 16:41:14     10s] LayerId::5 widthSet size::1
+[09/24 16:41:14     10s] LayerId::6 widthSet size::1
+[09/24 16:41:14     10s] eee: pegSigSF::1.070000
+[09/24 16:41:14     10s] Initializing multi-corner resistance tables ...
+[09/24 16:41:14     10s] eee: l::1 avDens::0.073883 usedTrk::559.199998 availTrk::7568.695652 sigTrk::559.199998
+[09/24 16:41:14     10s] eee: l::2 avDens::0.268405 usedTrk::2791.412647 availTrk::10400.000000 sigTrk::2791.412647
+[09/24 16:41:14     10s] eee: l::3 avDens::0.392280 usedTrk::3038.631440 availTrk::7746.086957 sigTrk::3038.631440
+[09/24 16:41:14     10s] eee: l::4 avDens::0.239793 usedTrk::1379.319264 availTrk::5752.131148 sigTrk::1379.319264
+[09/24 16:41:14     10s] eee: l::5 avDens::0.266388 usedTrk::1249.630146 availTrk::4691.014493 sigTrk::1249.630146
+[09/24 16:41:14     10s] eee: l::6 avDens::0.280821 usedTrk::204.523602 availTrk::728.306011 sigTrk::204.523602
+[09/24 16:41:14     10s] eee: LAM: n=40 LLS=2-3 HLS=3-5 rDens=0.416987 uaWl=0.998757 uaWlH=0.307361 aWlH=0.000000 lMod=0 pMax=0.873900 pMod=80 wcR=0.396600 newSi=0.001600 wHLS=0.991500 siPrev=0 viaL=0.000000
+[09/24 16:41:14     10s] Start generating vias ..
+[09/24 16:41:14     10s] #create default rule from bind_ndr_rule rule=0x7f074d6d2740 0x7f0727ec0ff0
+[09/24 16:41:14     10s] ### import design signature (1): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1
+[09/24 16:41:14     10s] #Skip building auto via since it is not turned on.
+[09/24 16:41:14     10s] Extracting standard cell pins and blockage ...... 
+[09/24 16:41:14     10s] Pin and blockage extraction finished
+[09/24 16:41:14     10s] Via generation completed.
+[09/24 16:41:14     10s] % Begin Load power constraints ... (date=09/24 16:41:14, mem=1206.0M)
+[09/24 16:41:14     10s] % End Load power constraints ... (date=09/24 16:41:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=1213.1M, current mem=1213.1M)
+[09/24 16:41:14     10s] % Begin load AAE data ... (date=09/24 16:41:14, mem=1228.2M)
+[09/24 16:41:14     11s] AAE DB initialization (MEM=1355.83 CPU=0:00:00.0 REAL=0:00:00.0) 
+[09/24 16:41:14     11s] % End load AAE data ... (date=09/24 16:41:14, total cpu=0:00:00.3, real=0:00:00.0, peak res=1234.9M, current mem=1234.9M)
+[09/24 16:41:14     11s] Restoring CCOpt config...
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign Begin ...
+[09/24 16:41:14     11s] Summary for sequential cells identification: 
+[09/24 16:41:14     11s]   Identified SBFF number: 45
+[09/24 16:41:14     11s]   Identified MBFF number: 0
+[09/24 16:41:14     11s]   Identified SB Latch number: 0
+[09/24 16:41:14     11s]   Identified MB Latch number: 0
+[09/24 16:41:14     11s]   Not identified SBFF number: 0
+[09/24 16:41:14     11s]   Not identified MBFF number: 0
+[09/24 16:41:14     11s]   Not identified SB Latch number: 0
+[09/24 16:41:14     11s]   Not identified MB Latch number: 0
+[09/24 16:41:14     11s]   Number of sequential cells which are not FFs: 23
+[09/24 16:41:14     11s]  Visiting view : VIEW_TYP
+[09/24 16:41:14     11s]    : PowerDomain = none : Weighted F : unweighted  = 42.50 (1.000) with rcCorner = 0
+[09/24 16:41:14     11s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[09/24 16:41:14     11s]  Visiting view : VIEW_TYP
+[09/24 16:41:14     11s]    : PowerDomain = none : Weighted F : unweighted  = 42.50 (1.000) with rcCorner = 0
+[09/24 16:41:14     11s]    : PowerDomain = none : Weighted F : unweighted  = 32.60 (1.000) with rcCorner = -1
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign End ...
+[09/24 16:41:14     11s]   Extracting original clock gating for clk...
+[09/24 16:41:14     11s]     clock_tree clk contains 119 sinks and 0 clock gates.
+[09/24 16:41:14     11s]   Extracting original clock gating for clk done.
+[09/24 16:41:14     11s]   The skew group clk/CONSTRAINTS was created. It contains 119 sinks and 1 sources.
+[09/24 16:41:14     11s]   The skew group clk/CONSTRAINTS was created. It contains 119 sinks and 1 sources.
+[09/24 16:41:14     11s] Restoring CCOpt config done.
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Deleting Cell Server Begin ...
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Deleting Cell Server End ...
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[09/24 16:41:14     11s] Summary for sequential cells identification: 
+[09/24 16:41:14     11s]   Identified SBFF number: 45
+[09/24 16:41:14     11s]   Identified MBFF number: 0
+[09/24 16:41:14     11s]   Identified SB Latch number: 0
+[09/24 16:41:14     11s]   Identified MB Latch number: 0
+[09/24 16:41:14     11s]   Not identified SBFF number: 0
+[09/24 16:41:14     11s]   Not identified MBFF number: 0
+[09/24 16:41:14     11s]   Not identified SB Latch number: 0
+[09/24 16:41:14     11s]   Not identified MB Latch number: 0
+[09/24 16:41:14     11s]   Number of sequential cells which are not FFs: 23
+[09/24 16:41:14     11s] Total number of combinational cells: 329
+[09/24 16:41:14     11s] Total number of sequential cells: 68
+[09/24 16:41:14     11s] Total number of tristate cells: 13
+[09/24 16:41:14     11s] Total number of level shifter cells: 7
+[09/24 16:41:14     11s] Total number of power gating cells: 0
+[09/24 16:41:14     11s] Total number of isolation cells: 11
+[09/24 16:41:14     11s] Total number of power switch cells: 0
+[09/24 16:41:14     11s] Total number of pulse generator cells: 0
+[09/24 16:41:14     11s] Total number of always on buffers: 0
+[09/24 16:41:14     11s] Total number of retention cells: 0
+[09/24 16:41:14     11s] List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+[09/24 16:41:14     11s] Total number of usable buffers: 15
+[09/24 16:41:14     11s] List of unusable buffers:
+[09/24 16:41:14     11s] Total number of unusable buffers: 0
+[09/24 16:41:14     11s] List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+[09/24 16:41:14     11s] Total number of usable inverters: 16
+[09/24 16:41:14     11s] List of unusable inverters:
+[09/24 16:41:14     11s] Total number of unusable inverters: 0
+[09/24 16:41:14     11s] List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+[09/24 16:41:14     11s] Total number of identified usable delay cells: 15
+[09/24 16:41:14     11s] List of identified unusable delay cells:
+[09/24 16:41:14     11s] Total number of identified unusable delay cells: 0
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Deleting Cell Server Begin ...
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] TimeStamp Deleting Cell Server End ...
+[09/24 16:41:14     11s] **WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
+[09/24 16:41:14     11s] timing_enable_separate_device_slew_effect_sensitivities
+[09/24 16:41:14     11s] #% End load design ... (date=09/24 16:41:14, total cpu=0:00:01.8, real=0:00:02.0, peak res=1258.7M, current mem=1240.4M)
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] *** Summary of all messages that are not suppressed in this session:
+[09/24 16:41:14     11s] Severity  ID               Count  Summary                                  
+[09/24 16:41:14     11s] WARNING   IMPLF-201            5  Pin '%s' in macro '%s' has no ANTENNADIF...
+[09/24 16:41:14     11s] WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+[09/24 16:41:14     11s] WARNING   IMPEXT-2766          6  The sheet resistance for layer %s is not...
+[09/24 16:41:14     11s] WARNING   IMPEXT-2773          6  The via resistance between layers %s and...
+[09/24 16:41:14     11s] WARNING   IMPOPT-3602          2  The specified path group name %s is not ...
+[09/24 16:41:14     11s] WARNING   IMPCTE-107           1  The following globals have been obsolete...
+[09/24 16:41:14     11s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+[09/24 16:41:14     11s] WARNING   TECHLIB-302         12  No function defined for cell '%s'. The c...
+[09/24 16:41:14     11s] *** Message Summary: 34 warning(s), 0 error(s)
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] <CMD> verify_drc -report ./runD/drc_gdscheck.rpt
+[09/24 16:41:14     11s] #-check_same_via_cell true               # bool, default=false, user setting
+[09/24 16:41:14     11s] #-report ./runD/drc_gdscheck.rpt         # string, default="", user setting
+[09/24 16:41:14     11s]  *** Starting Verify DRC (MEM: 1357.8) ***
+[09/24 16:41:14     11s] 
+[09/24 16:41:14     11s] #create default rule from bind_ndr_rule rule=0x7f074d6d2740 0x7f0729108ff0
+[09/24 16:41:14     11s] ### import design signature (2): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1
+[09/24 16:41:14     11s]   VERIFY DRC ...... Starting Verification
+[09/24 16:41:14     11s]   VERIFY DRC ...... Initializing
+[09/24 16:41:14     11s]   VERIFY DRC ...... Deleting Existing Violations
+[09/24 16:41:14     11s]   VERIFY DRC ...... Creating Sub-Areas
+[09/24 16:41:14     11s]   VERIFY DRC ...... Using new threading
+[09/24 16:41:14     11s]   VERIFY DRC ...... Sub-Area: {0.000 0.000 112.000 109.760} 1 of 9
+[09/24 16:41:14     11s]   VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+[09/24 16:41:14     11s]   VERIFY DRC ...... Sub-Area: {112.000 0.000 224.000 109.760} 2 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 2 complete 0 Viols.
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area: {224.000 0.000 329.820 109.760} 3 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 3 complete 0 Viols.
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area: {0.000 109.760 112.000 219.520} 4 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 4 complete 0 Viols.
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area: {112.000 109.760 224.000 219.520} 5 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 5 complete 0 Viols.
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area: {224.000 109.760 329.820 219.520} 6 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 6 complete 0 Viols.
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area: {0.000 219.520 112.000 325.040} 7 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 7 complete 0 Viols.
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area: {112.000 219.520 224.000 325.040} 8 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 8 complete 0 Viols.
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area: {224.000 219.520 329.820 325.040} 9 of 9
+[09/24 16:41:15     11s]   VERIFY DRC ...... Sub-Area : 9 complete 0 Viols.
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s]   Verification Complete : 0 Viols.
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s]  *** End Verify DRC (CPU: 0:00:00.7  ELAPSED TIME: 1.00  MEM: 287.1M) ***
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] <CMD> streamOut ./runD/coprocessor_nofill.gds -mapFile ./sky130_innovus.map -libName DesignLib -merge /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds -units 1000 -mode ALL
+[09/24 16:41:15     11s] Merge file: /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has version number: 3
+[09/24 16:41:15     11s] Parse flat map file...
+[09/24 16:41:15     11s] **WARN: (IMPOGDS-391):	Line 5: Object Type 'label' specified with layer 'li1' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+[09/24 16:41:15     11s] Type 'man IMPOGDS-391' for more detail.
+[09/24 16:41:15     11s] **WARN: (IMPOGDS-391):	Line 9: Object Type 'label' specified with layer 'met1' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+[09/24 16:41:15     11s] Type 'man IMPOGDS-391' for more detail.
+[09/24 16:41:15     11s] **WARN: (IMPOGDS-391):	Line 13: Object Type 'label' specified with layer 'met2' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+[09/24 16:41:15     11s] Type 'man IMPOGDS-391' for more detail.
+[09/24 16:41:15     11s] **WARN: (IMPOGDS-391):	Line 17: Object Type 'label' specified with layer 'met3' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+[09/24 16:41:15     11s] Type 'man IMPOGDS-391' for more detail.
+[09/24 16:41:15     11s] **WARN: (IMPOGDS-391):	Line 21: Object Type 'label' specified with layer 'met4' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+[09/24 16:41:15     11s] Type 'man IMPOGDS-391' for more detail.
+[09/24 16:41:15     11s] **WARN: (IMPOGDS-391):	Line 25: Object Type 'label' specified with layer 'met5' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+[09/24 16:41:15     11s] Type 'man IMPOGDS-391' for more detail.
+[09/24 16:41:15     11s] Writing GDSII file ...
+[09/24 16:41:15     11s] 	****** db unit per micron = 1000 ******
+[09/24 16:41:15     11s] 	****** output gds2 file unit per micron = 1000 ******
+[09/24 16:41:15     11s] 	****** unit scaling factor = 1 ******
+[09/24 16:41:15     11s] Output for instance
+[09/24 16:41:15     11s] Output for bump
+[09/24 16:41:15     11s] Output for physical terminals
+[09/24 16:41:15     11s] Output for logical terminals
+[09/24 16:41:15     11s] Output for regular nets
+[09/24 16:41:15     11s] Output for special nets and metal fills
+[09/24 16:41:15     11s] Output for via structure generation total number 8
+[09/24 16:41:15     11s] Statistics for GDS generated (version 3)
+[09/24 16:41:15     11s] ----------------------------------------
+[09/24 16:41:15     11s] Stream Out Layer Mapping Information:
+[09/24 16:41:15     11s] GDS Layer Number          GDS Layer Name
+[09/24 16:41:15     11s] ----------------------------------------
+[09/24 16:41:15     11s]     72                              met5
+[09/24 16:41:15     11s]     71                              via4
+[09/24 16:41:15     11s]     71                              met4
+[09/24 16:41:15     11s]     70                              via3
+[09/24 16:41:15     11s]     69                              via2
+[09/24 16:41:15     11s]     66                             licon
+[09/24 16:41:15     11s]     64                             nwell
+[09/24 16:41:15     11s]     67                               li1
+[09/24 16:41:15     11s]     70                              met3
+[09/24 16:41:15     11s]     69                              met2
+[09/24 16:41:15     11s]     68                               via
+[09/24 16:41:15     11s]     67                              mcon
+[09/24 16:41:15     11s]     68                              met1
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Stream Out Information Processed for GDS version 3:
+[09/24 16:41:15     11s] Units: 1000 DBU
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Object                             Count
+[09/24 16:41:15     11s] ----------------------------------------
+[09/24 16:41:15     11s] Instances                           7014
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Ports/Pins                             0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Nets                               84050
+[09/24 16:41:15     11s]     metal layer li1                 9536
+[09/24 16:41:15     11s]     metal layer met1               36228
+[09/24 16:41:15     11s]     metal layer met2               27256
+[09/24 16:41:15     11s]     metal layer met3                6444
+[09/24 16:41:15     11s]     metal layer met4                4346
+[09/24 16:41:15     11s]     metal layer met5                 240
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s]     Via Instances                  47628
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Special Nets                           0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s]     Via Instances                      0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Metal Fills                            0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s]     Via Instances                      0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Metal FillOPCs                         0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s]     Via Instances                      0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Metal FillDRCs                         0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s]     Via Instances                      0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Text                                   0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Blockages                              0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Custom Text                            0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Custom Box                             0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Trim Metal                             0
+[09/24 16:41:15     11s] 
+[09/24 16:41:15     11s] Scanning GDS file /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds to register cell name ......
+[09/24 16:41:15     11s] Merging GDS file /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds ......
+[09/24 16:41:15     11s] 	****** Merge file: /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has version number: 3.
+[09/24 16:41:15     11s] 	****** Merge file: /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has units: 1000 per micron.
+[09/24 16:41:15     11s] 	****** unit scaling factor = 1 ******
+[09/24 16:41:15     12s] ######Streamout is finished!
+[09/24 16:41:15     12s] 
+[09/24 16:41:15     12s] *** Memory Usage v#1 (Current mem = 1391.906M, initial mem = 483.887M) ***
+[09/24 16:41:15     12s] 
+[09/24 16:41:15     12s] *** Summary of all messages that are not suppressed in this session:
+[09/24 16:41:15     12s] Severity  ID               Count  Summary                                  
+[09/24 16:41:15     12s] WARNING   IMPLF-201            5  Pin '%s' in macro '%s' has no ANTENNADIF...
+[09/24 16:41:15     12s] WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+[09/24 16:41:15     12s] WARNING   IMPOGDS-391          6  Line %d: Object Type '%s' specified with...
+[09/24 16:41:15     12s] WARNING   IMPEXT-2766          6  The sheet resistance for layer %s is not...
+[09/24 16:41:15     12s] WARNING   IMPEXT-2773          6  The via resistance between layers %s and...
+[09/24 16:41:15     12s] WARNING   IMPOPT-3602          2  The specified path group name %s is not ...
+[09/24 16:41:15     12s] WARNING   IMPCTE-107           1  The following globals have been obsolete...
+[09/24 16:41:15     12s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+[09/24 16:41:15     12s] WARNING   TECHLIB-302         12  No function defined for cell '%s'. The c...
+[09/24 16:41:15     12s] *** Message Summary: 40 warning(s), 0 error(s)
+[09/24 16:41:15     12s] 
+[09/24 16:41:15     12s] --- Ending "Innovus" (totcpu=0:00:12.0, real=0:00:14.0, mem=1391.9M) ---

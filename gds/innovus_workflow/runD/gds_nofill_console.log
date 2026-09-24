@@ -1,0 +1,411 @@
+nohup: ignoring input
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+Options:	-no_gui -files gds_nofill.tcl -log runD/gds_nofill 
+Date:		Thu Sep 24 16:41:01 2026
+Host:		vlsiece24.iitr.ac.in (x86_64 w/Linux 4.18.0-553.105.1.el8_10.x86_64) (8cores*16cpus*11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz 16384KB)
+OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+License:
+		[16:41:01.275817] Configured Lic search path (21.01-s002): 5280@14.139.1.126
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_2270707_vlsiece24.iitr.ac.in_root_UMi8mx.
+
+Change the soft stacksize limit to 0.2%RAM (30 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+[INFO] Loading PVS 22.20 fill procedures
+**WARN: Tk package not loaded. The PVS fill DRC monitor is disabled.
+Sourcing file "gds_nofill.tcl" ...
+#% Begin load design ... (date=09/24 16:41:12, mem=865.8M)
+Loading design 'coprocessor' saved by 'Innovus' '21.15-s110_1' on 'Thu Sep 24 16:29:36 2026'.
+% Begin Load MMMC data ... (date=09/24 16:41:12, mem=869.2M)
+% End Load MMMC data ... (date=09/24 16:41:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=870.4M, current mem=870.4M)
+
+Loading LEF file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/libs/lef/sky130_fd_sc_hd_innovus.tlef ...
+
+Loading LEF file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/libs/lef/sky130_fd_sc_hd.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/libs/lef/sky130_fd_sc_hd.lef at line 2.
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M1 pitch 460.
+**WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probec_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'X' in macro 'sky130_fd_sc_hd__probe_p_8' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__macro_sparecell' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'HI' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'LO' in macro 'sky130_fd_sc_hd__conb_1' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/viewDefinition.tcl
+Reading LIB_TYP timing library '/home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_6'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_4'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_3'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_12'. The cell will only be used for analysis. (File /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/lib/sky130_fd_sc_hd__tt_025C_1v80.lib)
+Read 428 cells in library 'sky130_fd_sc_hd__tt_025C_1v80' 
+*** End library_loading (cpu=0.00min, real=0.00min, mem=33.5M, fe_cpu=0.17min, fe_real=0.18min, fe_mem=993.5M) ***
+% Begin Load netlist data ... (date=09/24 16:41:12, mem=889.6M)
+*** Begin netlist parsing (mem=993.5M) ***
+Created 428 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilogBinary netlist '/home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.v.bin'
+
+*** Memory Usage v#1 (Current mem = 999.523M, initial mem = 483.887M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=999.5M) ***
+% End Load netlist data ... (date=09/24 16:41:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=899.4M, current mem=899.4M)
+Set top cell to coprocessor.
+Hooked 428 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell coprocessor ...
+*** Netlist is unique.
+** info: there are 438 modules.
+** info: there are 7014 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1044.938M, initial mem = 483.887M) ***
+*info: set bottom ioPad orient R0
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+Loading preference file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/gui.pref.tcl ...
+**WARN: (IMPOPT-3602):	The specified path group name tdgp_reg2reg_default is not defined.
+Type 'man IMPOPT-3602' for more detail.
+Effort level <high> specified for tdgp_reg2reg_default path_group
+**WARN: (IMPOPT-3602):	The specified path group name reg2reg is not defined.
+Type 'man IMPOPT-3602' for more detail.
+Effort level <high> specified for reg2reg path_group
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+AAE_INFO: switching -siAware from false to true ...
+AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+Change floorplan default-technical-site to 'unithd'.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 329
+Total number of sequential cells: 68
+Total number of tristate cells: 13
+Total number of level shifter cells: 7
+Total number of power gating cells: 0
+Total number of isolation cells: 11
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+Total number of usable buffers: 15
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+Total number of usable inverters: 16
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+Total number of identified usable delay cells: 15
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Reading floorplan file - /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.fp.gz (mem = 1287.6M).
+% Begin Load floorplan data ... (date=09/24 16:41:13, mem=1179.0M)
+*info: reset 7055 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 329820 325040)
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Start create_tracks
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+ ... processed partition successfully.
+Reading binary special route file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.fp.spr.gz (Created by Innovus v21.15-s110_1 on Thu Sep 24 16:29:35 2026, version: 1)
+Convert 0 swires and 0 svias from compressed groups
+0 swires and 0 svias were compressed
+0 swires and 0 svias were decompressed from small or sparse groups
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1179.0M, current mem=1179.0M)
+There are 4 nets with weight being set
+There are 6 nets with bottomPreferredRoutingLayer being set
+There are 4 nets with avoidDetour being set
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Delete all existing relative floorplan constraints.
+% End Load floorplan data ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1181.4M, current mem=1181.4M)
+Reading congestion map file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.route.congmap.gz ...
+% Begin Load SymbolTable ... (date=09/24 16:41:13, mem=1181.6M)
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+% End Load SymbolTable ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1183.2M, current mem=1183.2M)
+Loading place ...
+% Begin Load placement data ... (date=09/24 16:41:13, mem=1183.2M)
+Reading placement file - /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v21.15-s110_1 on Thu Sep 24 16:29:35 2026, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1293.6M) ***
+Total net length = 1.876e+05 (8.139e+04 1.062e+05) (ext = 0.000e+00)
+% End Load placement data ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1185.7M, current mem=1185.4M)
+% Begin Load routing data ... (date=09/24 16:41:13, mem=1185.4M)
+Reading routing file - /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.route.gz.
+Reading Innovus routing data (Created by Innovus v21.15-s110_1 on Thu Sep 24 16:29:35 2026 Format: 20.1) ...
+*** Total 7048 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1299.6M) ***
+% End Load routing data ... (date=09/24 16:41:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=1196.9M, current mem=1195.9M)
+TAT_INFO: restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+Reading property file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1302.6M) ***
+Reading dirtyarea snapshot file /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor.db.da.gz (Create by Innovus v21.15-s110_1 on Thu Sep 24 16:29:36 2026, version: 4).
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M2 and M3 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M3 and M4 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M4 and M5 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M5 and M6 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 12.2 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.0285 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: VIEW_TYP
+    RC-Corner Name        : RC_TYP
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+Initializing multi-corner resistance tables ...
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Via generation completed.
+% Begin Load power constraints ... (date=09/24 16:41:14, mem=1206.0M)
+source /home/harshit/Desktop/rtltogds6/synth/.testing_pluto/PositCoprocessor_UART/gds/innovus_workflow/runD/route.enc.dat/coprocessor_power_constraints.tcl
+'set_default_switching_activity' finished successfully.
+% End Load power constraints ... (date=09/24 16:41:14, total cpu=0:00:00.0, real=0:00:00.0, peak res=1213.1M, current mem=1213.1M)
+% Begin load AAE data ... (date=09/24 16:41:14, mem=1228.2M)
+AAE DB initialization (MEM=1355.83 CPU=0:00:00.0 REAL=0:00:00.0) 
+% End load AAE data ... (date=09/24 16:41:14, total cpu=0:00:00.3, real=0:00:00.0, peak res=1234.9M, current mem=1234.9M)
+Restoring CCOpt config...
+  Extracting original clock gating for clk...
+    clock_tree clk contains 119 sinks and 0 clock gates.
+  Extracting original clock gating for clk done.
+  The skew group clk/CONSTRAINTS was created. It contains 119 sinks and 1 sources.
+  The skew group clk/CONSTRAINTS was created. It contains 119 sinks and 1 sources.
+Restoring CCOpt config done.
+Total number of combinational cells: 329
+Total number of sequential cells: 68
+Total number of tristate cells: 13
+Total number of level shifter cells: 7
+Total number of power gating cells: 0
+Total number of isolation cells: 11
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+Total number of usable buffers: 15
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+Total number of usable inverters: 16
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+Total number of identified usable delay cells: 15
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version . They will be removed in the next release. 
+timing_enable_separate_device_slew_effect_sensitivities
+#% End load design ... (date=09/24 16:41:14, total cpu=0:00:01.8, real=0:00:02.0, peak res=1258.7M, current mem=1240.4M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-201            5  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+WARNING   IMPEXT-2766          6  The sheet resistance for layer %s is not...
+WARNING   IMPEXT-2773          6  The via resistance between layers %s and...
+WARNING   IMPOPT-3602          2  The specified path group name %s is not ...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+WARNING   TECHLIB-302         12  No function defined for cell '%s'. The c...
+*** Message Summary: 34 warning(s), 0 error(s)
+
+#-check_same_via_cell true               # bool, default=false, user setting
+#-report ./runD/drc_gdscheck.rpt         # string, default="", user setting
+ *** Starting Verify DRC (MEM: 1357.8) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+  VERIFY DRC ...... Sub-Area: {0.000 0.000 112.000 109.760} 1 of 9
+  VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {112.000 0.000 224.000 109.760} 2 of 9
+  VERIFY DRC ...... Sub-Area : 2 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {224.000 0.000 329.820 109.760} 3 of 9
+  VERIFY DRC ...... Sub-Area : 3 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {0.000 109.760 112.000 219.520} 4 of 9
+  VERIFY DRC ...... Sub-Area : 4 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {112.000 109.760 224.000 219.520} 5 of 9
+  VERIFY DRC ...... Sub-Area : 5 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {224.000 109.760 329.820 219.520} 6 of 9
+  VERIFY DRC ...... Sub-Area : 6 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {0.000 219.520 112.000 325.040} 7 of 9
+  VERIFY DRC ...... Sub-Area : 7 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {112.000 219.520 224.000 325.040} 8 of 9
+  VERIFY DRC ...... Sub-Area : 8 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area: {224.000 219.520 329.820 325.040} 9 of 9
+  VERIFY DRC ...... Sub-Area : 9 complete 0 Viols.
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.7  ELAPSED TIME: 1.00  MEM: 287.1M) ***
+
+Merge file: /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has version number: 3
+Parse flat map file...
+**WARN: (IMPOGDS-391):	Line 5: Object Type 'label' specified with layer 'li1' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+Type 'man IMPOGDS-391' for more detail.
+**WARN: (IMPOGDS-391):	Line 9: Object Type 'label' specified with layer 'met1' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+Type 'man IMPOGDS-391' for more detail.
+**WARN: (IMPOGDS-391):	Line 13: Object Type 'label' specified with layer 'met2' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+Type 'man IMPOGDS-391' for more detail.
+**WARN: (IMPOGDS-391):	Line 17: Object Type 'label' specified with layer 'met3' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+Type 'man IMPOGDS-391' for more detail.
+**WARN: (IMPOGDS-391):	Line 21: Object Type 'label' specified with layer 'met4' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+Type 'man IMPOGDS-391' for more detail.
+**WARN: (IMPOGDS-391):	Line 25: Object Type 'label' specified with layer 'met5' is not legal. The map file maybe being a DFII/Virtuoso map file. For a list of legal object types refer to the map file syntax in the User Guide.
+Type 'man IMPOGDS-391' for more detail.
+Writing GDSII file ...
+	****** db unit per micron = 1000 ******
+	****** output gds2 file unit per micron = 1000 ******
+	****** unit scaling factor = 1 ******
+Output for instance
+Output for bump
+Output for physical terminals
+Output for logical terminals
+Output for regular nets
+Output for special nets and metal fills
+Output for via structure generation total number 8
+Statistics for GDS generated (version 3)
+----------------------------------------
+Stream Out Layer Mapping Information:
+GDS Layer Number          GDS Layer Name
+----------------------------------------
+    72                              met5
+    71                              via4
+    71                              met4
+    70                              via3
+    69                              via2
+    66                             licon
+    64                             nwell
+    67                               li1
+    70                              met3
+    69                              met2
+    68                               via
+    67                              mcon
+    68                              met1
+
+
+Stream Out Information Processed for GDS version 3:
+Units: 1000 DBU
+
+Object                             Count
+----------------------------------------
+Instances                           7014
+
+Ports/Pins                             0
+
+Nets                               84050
+    metal layer li1                 9536
+    metal layer met1               36228
+    metal layer met2               27256
+    metal layer met3                6444
+    metal layer met4                4346
+    metal layer met5                 240
+
+    Via Instances                  47628
+
+Special Nets                           0
+
+    Via Instances                      0
+
+Metal Fills                            0
+
+    Via Instances                      0
+
+Metal FillOPCs                         0
+
+    Via Instances                      0
+
+Metal FillDRCs                         0
+
+    Via Instances                      0
+
+Text                                   0
+
+
+Blockages                              0
+
+
+Custom Text                            0
+
+
+Custom Box                             0
+
+Trim Metal                             0
+
+Scanning GDS file /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds to register cell name ......
+Merging GDS file /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds ......
+	****** Merge file: /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has version number: 3.
+	****** Merge file: /root/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds has units: 1000 per micron.
+	****** unit scaling factor = 1 ******
+######Streamout is finished!
+
+*** Memory Usage v#1 (Current mem = 1391.906M, initial mem = 483.887M) ***
+*** Message Summary: 40 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:12.0, real=0:00:14.0, mem=1391.9M) ---
+

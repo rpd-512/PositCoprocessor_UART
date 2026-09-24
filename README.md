@@ -86,9 +86,16 @@ Coprocessor → host, 1 byte per command:
 │   └── innovus_workflow/
 │       ├── init_innovus.tcl    # original Innovus init script
 │       ├── mmmc.tcl            # original MMMC setup
-│       ├── run_flow.tcl        # full flow: init, floorplan, place, CTS, route, DRC, reports
-│       ├── runA/               # 110 MHz netlist + SDC (pt/), checkpoints, reports
-│       └── runB/               # 130 MHz netlist, SDC relaxed to 8.8 ns (pt/), checkpoints, reports
+│       ├── run_flow.tcl        # full flow: init, floorplan, place, CTS, route, post-route opt, DRC, reports (RUN=<dir>)
+│       ├── gds_flow.tcl        # stream-out with filler insertion (produces DRC shorts, not used for the final GDS)
+│       ├── gds_nofill.tcl      # final stream-out from the routed database, no fillers
+│       ├── sky130_innovus.map  # Innovus stream-out layer map (LEF layer -> GDS layer/datatype)
+│       ├── power.rpt
+│       ├── timingReports/
+│       ├── runA/               # 110 MHz netlist, 9.09 ns target: pt/ (netlist + SDC), checkpoints, reports
+│       ├── runB/               # 130 MHz netlist, 8.8 ns target
+│       ├── runC/               # 130 MHz netlist, 9.09 ns target
+│       └── runD/               # 130 MHz netlist, 9.3 ns target (timing closed); contains coprocessor_nofill.gds
 ├── Makefile
 └── README.md
 ```
@@ -142,6 +149,60 @@ result = ser.read(1)[0]
 - Repeated the 130 MHz synthesis using high generic synthesis effort and verified that the resulting area remained 38,974.88 µm², providing an experimental check on the effect of synthesis effort.
 - Created a reproducible Genus → Innovus handoff flow, with each feasible synthesis point producing its corresponding netlist and timing constraints.
 
+## Physical Design: Cadence Innovus — Place & Route and GDS
+
+### Flow
+
+Implemented in `gds/innovus_workflow/run_flow.tcl`, run once per candidate with `RUN=<dir>`, each directory holding its own netlist and SDC in `pt/`:
+
+```
+init_design -> floorPlan (330 x 325 um die) -> place_opt_design -> ccopt_design (CTS) -> routeDesign
+            -> post-route optDesign (OCV analysis) -> verify_drc -> timing / area / power reports
+```
+
+- **Technology files:** SKY130 HD typical-corner liberty (`tt_025C_1v80`), standard-cell LEF, and a tech LEF patched for Innovus (the original was rejected with `IMPLF-121`; a `licon` cut layer was inserted after `pwell` to fix the layer order).
+- **Floorplan:** the larger 330 x 325 um floorplan replaced the original ~277 x 273 um one, which had excessive density, congestion and 69 DRC violations after routing.
+- **Post-route optimization:** run with `setAnalysisMode -analysisType onChipVariation -cppr both`, since Innovus requires OCV mode for SI-aware post-route optimization (`IMPOPT-6080`).
+
+### Results
+
+All four runs use SKY130 HD, a 330 x 325 um die, and the same flow. Runs B to D use the netlist that Genus synthesized at 130 MHz (7.69 ns), with only the SDC period relaxed for Innovus.
+
+| Run | Netlist | Target period | Setup slack (pre-opt → post-opt) | Hold slack | DRC | Std-cell area |
+|-----|---------|---------------|----------------------------------|------------|-----|---------------|
+| A | 110 MHz Genus netlist | 9.09 ns (110 MHz) | -0.177 → -0.112 ns | +0.553 ns | clean | 50,128 µm² |
+| B | 130 MHz Genus netlist | 8.80 ns (113.6 MHz) | -0.245 → -0.156 ns | +0.517 ns | clean | 48,761 µm² |
+| C | 130 MHz Genus netlist | 9.09 ns (110 MHz) | -0.522 → -0.061 ns | +0.485 ns | clean | 45,669 µm² |
+| **D** | 130 MHz Genus netlist | **9.30 ns (107.5 MHz)** | -0.334 → **+0.023 ns** | +0.550 ns | clean | **42,210 µm²** |
+
+**Run D closes timing** post-route at a 9.3 ns target (about 107.5 MHz) with 0 DRC violations. Setup slack after post-route optimization is only +0.023 ns, so the margin is thin.
+
+Key observations:
+- Genus reports zero slack at 130 MHz (132 MHz is the first failing point), but the same netlist did not close post-route at the 7.69 ns target: an earlier baseline run on the same netlist showed about -1.06 ns post-route WNS. Routing and clock-tree effects cost roughly 1 ns on top of the synthesis result.
+- The critical paths run through the 12x12 significand multiplier in `posit_muldiv`, which Genus maps to generic NAND-based standard cells. Raising `syn_generic_effort` from medium to high left the area unchanged.
+- Area after routing falls as the target period relaxes (50.1k, 48.8k, 45.7k and 42.2k µm² across A to D).
+- Results vary from run to run (run C has worse pre-optimization slack than run B despite a looser target), so small differences between runs should not be over-interpreted.
+
+Known messages that do not affect the result:
+- `IMPCCOPT-1209` (CTS transition-time target) appears in all runs; the runs still complete CTS, routing and DRC.
+- `IMPSP-9099`: Genus mapped some registers to SKY130 scan flops (`sky130_fd_sc_hd__sdf*`, 53 cells in the 110 MHz netlist), and no scan chains are defined for them.
+
+### GDS generation
+
+The final layout is produced by `gds_nofill.tcl` from the routed, DRC-clean database of run D (`runD/route.enc.dat`):
+
+```
+restoreDesign runD/route.enc.dat -> verify_drc -> streamOut (merge SKY130 standard-cell GDS)
+```
+
+- **Output:** `gds/innovus_workflow/runD/coprocessor_nofill.gds` (about 7.9 MB), with 0 DRC violations on the source database and 0 errors in the stream-out log.
+- **Standard-cell layouts:** merged from the SKY130A PDK file `sky130_fd_sc_hd.gds`.
+- **Layer map:** `sky130_innovus.map` maps LEF layers to SKY130 GDS layer/datatype numbers (for example `met1` to 68/20, `li1` to 67/20).
+- **No filler cells:** `gds_flow.tcl` also tried `addFiller` before stream-out, but adding fillers to a post-route database produced metal shorts (about 1000 DRC violations in the report), so the final GDS is generated without fillers.
+- **Limitations:** the flow has no power grid (no rings, stripes or tap cells), so the GDS is a layout of the placed and routed logic, not a tape-out-ready or LVS-clean design.
+
+Open `coprocessor_nofill.gds` in KLayout with `sky130A.map` from the PDK as the layer properties file to inspect it.
+
 ## Status
 
 - [x] UART TX/RX core
@@ -153,6 +214,10 @@ result = ser.read(1)[0]
 - [x] Verification / testbench coverage
 - [x] Simulated on Basys 3 FPGA and tested over a real serial port
 - [x] Genus synthesis flow with automated frequency search (SKY130 HD)
+- [x] Innovus place & route with timing closed post-route at 107.5 MHz (0 DRC)
+- [x] GDS generated from the routed database (no fillers, no power grid)
+- [ ] Power grid, tap cells and LVS
+- [ ] Multiplier architecture exploration (12x12 significand multiplier is the critical path)
 
 ## License
 

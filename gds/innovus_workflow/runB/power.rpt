@@ -1,0 +1,240 @@
+Using Power View: VIEW_TYP.
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE_INFO: resetNetProps viewIdx 0 
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: coprocessor
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Start delay calculation (fullDC) (1 T). (MEM=1991.59)
+Total number of fetched objects 7497
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+AAE_INFO-618: Total number of nets in the design is 7504,  99.9 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2003.2 CPU=0:00:01.3 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2003.2 CPU=0:00:01.3 REAL=0:00:01.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2011.2M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2011.2M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (1 T). (MEM=1969.32)
+Glitch Analysis: View VIEW_TYP -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View VIEW_TYP -- Total Number of Nets Analyzed = 7497. 
+Total number of fetched objects 7497
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+AAE_INFO-618: Total number of nets in the design is 7504,  35.7 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2012 CPU=0:00:01.3 REAL=0:00:02.0)
+End delay calculation (fullDC). (MEM=2012 CPU=0:00:01.3 REAL=0:00:02.0)
+Load RC corner of view VIEW_TYP
+
+Begin Power Analysis
+
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1777.18MB/3366.14MB/1884.39MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+clk(113.636MHz) CK: assigning clock clk to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1777.80MB/3366.14MB/1884.39MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1777.80MB/3366.14MB/1884.39MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT)
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 10%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 20%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 30%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 40%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 50%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 60%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 70%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 80%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 90%
+
+Finished Levelizing
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT)
+
+Starting Activity Propagation
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT)
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 10%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 20%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 30%
+
+Finished Activity Propagation
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1778.21MB/3366.14MB/1884.39MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 0
+      # of cell(s) missing leakage table: 0
+      ----------------------------------------------------------
+
+
+
+Starting Calculating power
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT)
+ ... Calculating switching power
+  Cannot locate supply power rail for net 'FE_COEN2253_n_3319' of instance
+FE_COEC2253_n_3319
+  Cannot locate supply power rail for net 'FE_COEN2252_FE_OFN197_n_3309' of
+instance FE_COEC2252_FE_OFN197_n_3309
+  Cannot locate supply power rail for net 'FE_COEN2251_n_3944' of instance
+FE_COEC2251_n_3944
+  Cannot locate supply power rail for net 'FE_COEN2250_n_2642' of instance
+FE_COEC2250_n_2642
+  Cannot locate supply power rail for net 'FE_COEN2249_n_2807' of instance
+FE_COEC2249_n_2807
+  only first five unconnected nets are listed...
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 10%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 20%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 30%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 40%
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 50%
+ ... Calculating internal and leakage power
+2026-Sep-24 16:22:39 (2026-Sep-24 10:52:39 GMT): 60%
+2026-Sep-24 16:22:40 (2026-Sep-24 10:52:40 GMT): 70%
+2026-Sep-24 16:22:40 (2026-Sep-24 10:52:40 GMT): 80%
+2026-Sep-24 16:22:40 (2026-Sep-24 10:52:40 GMT): 90%
+
+Finished Calculating power
+2026-Sep-24 16:22:40 (2026-Sep-24 10:52:40 GMT)
+      # of MSMV cell(s) missing power_level: 0
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1779.71MB/3374.15MB/1884.39MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=1779.71MB/3374.15MB/1884.39MB)
+
+Ended Power Analysis: (cpu=0:00:00, real=0:00:02, mem(process/total/peak)=1779.71MB/3374.15MB/1884.39MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=1779.71MB/3374.15MB/1884.39MB)
+Begin Static Power Report Generation
+*----------------------------------------------------------------------------------------
+*	Innovus 21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Sep-24 16:22:40 (2026-Sep-24 10:52:40 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: coprocessor
+*
+*	Liberty Libraries used:
+*	        VIEW_TYP: ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+*
+*	Parasitic Files used:
+*
+*       Power View : VIEW_TYP
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs
+*
+*       report_power
+*
+-----------------------------------------------------------------------------------------
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        6.32637916 	   34.0641%
+Total Switching Power:      12.24555684 	   65.9357%
+Total Leakage Power:         0.00002386 	    0.0001%
+Total Power:                18.57195985
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                        0.6524      0.0631   1.523e-06      0.7155       3.852
+Macro                                  0           0           0           0           0
+IO                                     0           0           0           0           0
+Combinational                      5.648       12.03    2.23e-05       17.67       95.16
+Clock (Combinational)            0.02646      0.1567   3.423e-08      0.1831       0.986
+Clock (Sequential)                     0           0           0           0           0
+-----------------------------------------------------------------------------------------
+Total                              6.326       12.25   2.386e-05       18.57         100
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Default                   1.8      6.326       12.25   2.386e-05       18.57         100
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk                              0.02646      0.1567   3.423e-08      0.1831       0.986
+-----------------------------------------------------------------------------------------
+Total                            0.02646      0.1567   3.423e-08      0.1831       0.986
+-----------------------------------------------------------------------------------------
+Clock: clk
+Clock Period: 0.008800 usec 
+Clock Toggle Rate:   227.2727 Mhz 
+Clock Static Probability:  0.5000
+  
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*              Highest Average Power:       CTS_ccl_a_inv_00002 (sky130_fd_sc_hd__clkinv_16):          0.07405
+*              Highest Leakage Power:                     g2008 (sky130_fd_sc_hd__a22oi_4):        2.987e-08
+*                Total Cap:      1.01565e-10 F
+*                Total instances in design:  7463
+*                Total instances in design with no power:     0
+*                Total instances in design with no activty:     0
+
+*                Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+ 
+** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=1782.06MB/3374.15MB/1884.39MB)
+
