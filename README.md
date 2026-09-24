@@ -8,6 +8,7 @@ A hardware coprocessor implementing posit arithmetic, exposed to a host system o
 - **Host interface:** UART, 3-byte command / 1-byte response protocol
 - **UART config:** 115200 baud, 8N1, oversampled 16x (`baud_gen`)
 - **Operations:** add, sub, mul, div, posit→float, float→posit
+- **Hardware validation:** simulated on a Digilent Basys 3 FPGA board and tested over a real serial port, in addition to the Verilator virtual-serial-port flow below
 
 ## Architecture
 
@@ -55,12 +56,39 @@ Coprocessor → host, 1 byte per command:
 ```
 .
 ├── rtl/
-│   ├── coprocessor.sv          # posit_coprocessor top + control FSM
+│   ├── posit_primitives.sv     # shared primitives
+│   ├── posit_decoder.sv        # posit decoder
+│   ├── posit_encoder.sv        # posit encoder
+│   ├── posit_addsub.sv         # add/sub unit
+│   ├── posit_muldiv.sv         # mul/div unit
+│   ├── posit_to_float.sv       # posit -> float
+│   ├── float_to_posit.sv       # float -> posit
+│   ├── posit_arithmetic.sv     # ALU wrapper
 │   ├── uart_head.sv            # uart_head, uart_tx, uart_rx, baud_gen
-│   └── posit_arithmetic.sv     # posit_arithmetic, posit_addsub, posit_muldiv, posit_to_float, float_to_posit
+│   └── coprocessor.sv          # coprocessor top + control FSM
 ├── serial_virtual/
 │   ├── vserial_bridge.cpp      # Verilator sim wrapped in a virtual serial port (Linux pty)
 │   └── posit_serial.py         # host-side driver (pyserial)
+├── gds/                        # physical design flow (SKY130 HD)
+│   ├── lib/
+│   │   ├── sky130_fd_sc_hd__tt_025C_1v80.lib   # timing library
+│   │   ├── sky130_fd_sc_hd.lef                 # standard-cell LEF
+│   │   ├── sky130_fd_sc_hd.tlef                # original tech LEF
+│   │   └── sky130_fd_sc_hd_innovus.tlef        # tech LEF patched for Innovus (licon cut layer added)
+│   ├── genus_workflow/
+│   │   ├── fresh_point.tcl     # single-frequency Genus synthesis script
+│   │   ├── run_sweep.sh        # frequency binary search + local sweep driver
+│   │   ├── sweep_fresh/        # per-frequency reports, row_*.csv, sweep_results.csv, pt_<f>MHz/ (netlist + SDC)
+│   │   ├── final_results_fresh/
+│   │   ├── fv/
+│   │   ├── test_pt/
+│   │   └── genus.cmd*, genus.log*   # Genus session command/log files
+│   └── innovus_workflow/
+│       ├── init_innovus.tcl    # original Innovus init script
+│       ├── mmmc.tcl            # original MMMC setup
+│       ├── run_flow.tcl        # full flow: init, floorplan, place, CTS, route, DRC, reports
+│       ├── runA/               # 110 MHz netlist + SDC (pt/), checkpoints, reports
+│       └── runB/               # 130 MHz netlist, SDC relaxed to 8.8 ns (pt/), checkpoints, reports
 ├── Makefile
 └── README.md
 ```
@@ -98,6 +126,22 @@ ser.write(bytes([0b000, 5, 3]))   # ADD, in1=5, in2=3
 result = ser.read(1)[0]
 ```
 
+## Physical Design: Cadence Genus — Automated RTL Synthesis & Timing Search
+
+- Developed an automated Cadence Genus 21.14 synthesis workflow for the SKY130 HD library, supporting frequency-parametric RTL synthesis with automatically generated clock and I/O timing constraints.
+- Built a local automated binary-search framework to determine the highest timing-feasible operating frequency, launching an independent Genus process for each candidate point to avoid synthesis-session state contamination.
+- Automated extraction of WNS, area, leakage power, dynamic power, total power, timing pass/fail, and synthesis runtime into structured CSV results.
+- Automatically generated and archived frequency-specific synthesized netlists and SDC constraints for timing-feasible operating points, enabling direct handoff from Genus to Innovus.
+- Performed a frequency sweep over the coprocessor and established the 130 MHz operating point used for subsequent physical implementation.
+- At 130 MHz, Genus reported:
+  - Area: 38,974.88 µm²
+  - Dynamic power: 8,206.54 µW
+  - Leakage power: 0.02091 µW
+  - Total power: 8,206.56 µW
+  - Clock period: 7.6923 ns
+- Repeated the 130 MHz synthesis using high generic synthesis effort and verified that the resulting area remained 38,974.88 µm², providing an experimental check on the effect of synthesis effort.
+- Created a reproducible Genus → Innovus handoff flow, with each feasible synthesis point producing its corresponding netlist and timing constraints.
+
 ## Status
 
 - [x] UART TX/RX core
@@ -107,6 +151,8 @@ result = ser.read(1)[0]
 - [x] posit ALU: mul/div
 - [x] posit encode/decode (posit↔float, placeholder only)
 - [x] Verification / testbench coverage
+- [x] Simulated on Basys 3 FPGA and tested over a real serial port
+- [x] Genus synthesis flow with automated frequency search (SKY130 HD)
 
 ## License
 
